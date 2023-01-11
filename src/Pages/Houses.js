@@ -2,16 +2,24 @@ import React from "react";
 import "./Houses.css";
 import img1 from "../Assets/frontpage.jpg";
 import Property from "../Components/Property";
+import ImageSlider from "../Components/ImageSlider";
+import img2 from "../Assets/house1.1.jpg";
+import img3 from "../Assets/house1.2.jpg";
+import img4 from "../Assets/house1.3.jpg";
 
 function Houses() {
+  const slides = [{ img2 }, { img3 }, { img4 }];
   return (
     <div className="houses">
       <img src={img1} alt="frontpage" />
       <h1>Houses</h1>
+      <div className="slidercontainer">
+        <ImageSlider slides={slides} />
+      </div>
       <div className="properties">
         <Property
           image={img1}
-          type="apartment"
+          type="town house"
           location="Bole Wolosefer Addis Ababa"
           area="150 m2"
           rooms="beds:3, bath:1"
@@ -51,7 +59,7 @@ function Houses() {
         />
         <Property
           image={img1}
-          type="G+3"
+          type="apartment"
           location="Bole Wolosefer Addis Ababa"
           area="3350 m2"
           rooms="beds:3, bath:1"

@@ -14,3 +14,8 @@
     justify-content: center;
     padding: 20px;
 }
+.slidercontainer {
+    width: 500px;
+    height: 280px;
+    margin: 0 auto;
+}
