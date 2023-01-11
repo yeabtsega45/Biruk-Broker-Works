@@ -15,8 +15,12 @@ function ImageSlider(slides) {
   };
   return (
     <div className="slider">
-      <div className="leftarrow" onClick={goToPrevious}></div>
-      <div className="rightarrow" onClick={goToNext}></div>
+      <div className="leftarrow" onClick={goToPrevious}>
+        ❮
+      </div>
+      <div className="rightarrow" onClick={goToNext}>
+        ❯
+      </div>
       <div className="slide"></div>
     </div>
   );

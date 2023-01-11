@@ -1,6 +1,5 @@
 import React from "react";
 import "./Property.css";
-// import ImageSlider from "./ImageSlider";
 
 function Property({ image, type, location, area, rooms, price }) {
   return (
