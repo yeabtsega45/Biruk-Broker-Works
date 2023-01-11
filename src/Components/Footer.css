@@ -1,0 +1,15 @@
+.footer {
+    background-color: orange;
+    color: white;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+.icon {
+    margin: 10px 10px;
+    background-color: #005ea2;
+    transform: scale(1.2);
+    color: whitesmoke;
+    padding: 0;
+}
