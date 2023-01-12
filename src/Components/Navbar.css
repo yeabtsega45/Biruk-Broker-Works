@@ -27,3 +27,26 @@ nav > a {
     padding: 10px;
     text-decoration-line: none;
 }
+.search {
+    justify-content: right;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: gray;
+    background-color: orange;
+}
+.search > input {
+    outline: none;
+    width: 200px;
+    height: 20px;
+}
+.searchicon {
+    background-color: #005ea2;
+    color: white;
+}
+.navandsearch {
+    display: flex;
+    background-color: orange;
+    justify-content: space-between;
+}

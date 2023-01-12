@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
+import SearchIcon from "@material-ui/icons/Search";
 
 function Navbar() {
   return (
@@ -10,12 +11,18 @@ function Navbar() {
         <img src={logo} alt="logo" />
         <h2>Biruk Broker Works</h2>
       </div>
-      <nav>
-        <Link to="/">Houses</Link>
-        <Link to="/cars">Cars</Link>
-        <Link to="/lands">Lands</Link>
-        <Link to="/rentalhouses">Rental Houses</Link>
-      </nav>
+      <div className="navandsearch">
+        <nav>
+          <Link to="/">Houses</Link>
+          <Link to="/cars">Cars</Link>
+          <Link to="/lands">Lands</Link>
+          <Link to="/rentalhouses">Rental Houses</Link>
+        </nav>
+        <div className="search">
+          <input placeholder="search" type="text" />
+          <SearchIcon className="searchicon" />
+        </div>
+      </div>
     </div>
   );
 }
