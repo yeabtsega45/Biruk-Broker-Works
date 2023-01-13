@@ -9,7 +9,7 @@ function Navbar() {
     <div>
       <div className="title">
         <img src={logo} alt="logo" />
-        <h2>Biruk Broker Works</h2>
+        <h2>BIRUK BROKER WORKS</h2>
       </div>
       <div className="navandsearch">
         <nav>
