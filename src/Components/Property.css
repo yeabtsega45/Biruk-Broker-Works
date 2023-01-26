@@ -13,3 +13,16 @@
     width: 100%;
     border-radius: 5px;
 }
+.property > p {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    /* color: goldenrod; */
+}
+.large {
+    font-size: larger;
+    color: orange;
+}
+.small {
+    color: #636363;
+    font-size: small;
+}
