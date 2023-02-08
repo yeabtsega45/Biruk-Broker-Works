@@ -21,16 +21,16 @@ function Navbar() {
         <h2>BIRUK BROKER WORKS</h2>
       </div>
       <div className="navandsearch">
-        <nav>
+        <nav ref={navRef}>
           <Link to="/">Houses</Link>
           <Link to="/cars">Cars</Link>
           <Link to="/lands">Lands</Link>
           <Link to="/rentalhouses">Rental Houses</Link>
-          <button>
+          <button onClick={showNavbar}>
             <CloseIcon />
           </button>
         </nav>
-        <button>
+        <button onClick={showNavbar}>
           <MenuIcon />
         </button>
         <div className="search">
