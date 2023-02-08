@@ -61,8 +61,14 @@ nav > a {
     justify-content: space-between;
 }
 @media only screen and (max-width: 768px){
+    nav{
+
+    }
     .nav-btn{
         visibility: visible;
         opacity: 1;
+    }
+    .responsive_nav{
+        transform: none;
     }
 }
