@@ -21,11 +21,11 @@ nav {
     padding: 16px 32px
 }
 nav > a {
-    border-left: 0.5px solid white;
     color: white;
+    font-weight: bolder;
     margin-right: 20px;
     padding: 10px;
-    text-decoration-line: none;
+    text-decoration-line: underline;
 }
 .nav-btn {
     padding: 5px;
@@ -74,6 +74,11 @@ nav > a {
         height: 100vh;
         background-color: orange;
         padding: 40px 0 0 10px;
+        transition: 0.3s ease-in-out;
+        transform: translateY(-100vh);
+    }
+    nav > a {
+        margin-bottom: 25px;
     }
     .nav-btn{
         visibility: visible;
