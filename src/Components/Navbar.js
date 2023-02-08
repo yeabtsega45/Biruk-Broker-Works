@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import SearchIcon from "@material-ui/icons/Search";
@@ -7,6 +8,8 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
+  const navRef = useRef();
+
   return (
     <div>
       <div className="title">
