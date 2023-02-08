@@ -10,6 +10,10 @@ import CloseIcon from "@material-ui/icons/Close";
 function Navbar() {
   const navRef = useRef();
 
+  const showNavbar = () => {
+    navRef.current.classList.toggle("resposive_nav");
+  };
+
   return (
     <div>
       <div className="title">
