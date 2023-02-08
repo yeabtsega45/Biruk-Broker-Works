@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import SearchIcon from "@material-ui/icons/Search";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
   return (
@@ -17,7 +19,13 @@ function Navbar() {
           <Link to="/cars">Cars</Link>
           <Link to="/lands">Lands</Link>
           <Link to="/rentalhouses">Rental Houses</Link>
+          <button>
+            <CloseIcon />
+          </button>
         </nav>
+        <button>
+          <MenuIcon />
+        </button>
         <div className="search">
           <input placeholder="search" type="text" />
           <SearchIcon className="searchicon" />
