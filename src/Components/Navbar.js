@@ -26,11 +26,11 @@ function Navbar() {
           <Link to="/cars">Cars</Link>
           <Link to="/lands">Lands</Link>
           <Link to="/rentalhouses">Rental Houses</Link>
-          <button onClick={showNavbar}>
+          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
             <CloseIcon />
           </button>
         </nav>
-        <button onClick={showNavbar}>
+        <button className="nav-btn" onClick={showNavbar}>
           <MenuIcon />
         </button>
         <div className="search">

@@ -27,6 +27,16 @@ nav > a {
     padding: 10px;
     text-decoration-line: none;
 }
+.nav-btn {
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+}
 .search {
     justify-content: right;
     padding: 10px;
