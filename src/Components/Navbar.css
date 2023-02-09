@@ -148,4 +148,10 @@ nav > a:hover {
         top: 2rem;
         right: 2rem;
     } */
+    .logo {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
 }
