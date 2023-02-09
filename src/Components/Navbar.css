@@ -65,6 +65,9 @@ nav > a:hover {
     opacity: 0;
     font-size: 1.8rem;
 } */
+.mobile-menu-icon {
+    display: none;
+}
 /* .search {
     justify-content: right;
     padding: 10px;

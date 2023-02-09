@@ -25,7 +25,7 @@ function Navbar() {
       </div>
       <div className="navandsearch">
         <nav
-          className={show ? "mobile-nav" : "nav"}
+          className={show ? "nav-links" : "nav"}
           onClick={() => setShow(false)}
         >
           <Link to="/">Houses</Link>
@@ -33,11 +33,8 @@ function Navbar() {
           <Link to="/lands">Lands</Link>
           <Link to="/rentalhouses">Rental Houses</Link>
         </nav>
-        <button
-          className="nav-btn nav-close-btn"
-          onClick={() => setShow(!show)}
-        >
-          {setShow ? <CloseIcon /> : <MenuIcon />}
+        <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
+          {show ? <CloseIcon /> : <MenuIcon />}
         </button>
         {/* <div className="search">
           <input placeholder="search" type="text" />
