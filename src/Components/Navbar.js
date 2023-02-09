@@ -23,24 +23,24 @@ function Navbar() {
         <img src={logo} alt="logo" />
         <h2>BIRUK BROKER WORKS</h2>
       </div>
-      <div className="navandsearch">
-        <nav
-          className={show ? "nav-links" : "nav-links-mobile"}
-          onClick={() => setShow(false)}
-        >
-          <Link to="/">Houses</Link>
-          <Link to="/cars">Cars</Link>
-          <Link to="/lands">Lands</Link>
-          <Link to="/rentalhouses">Rental Houses</Link>
-        </nav>
-        <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
-          {show ? <CloseIcon /> : <MenuIcon />}
-        </button>
-        {/* <div className="search">
+      {/* <div className="navandsearch"> */}
+      <nav
+        className={show ? "nav-links" : "nav-links-mobile"}
+        onClick={() => setShow(false)}
+      >
+        <Link to="/">Houses</Link>
+        <Link to="/cars">Cars</Link>
+        <Link to="/lands">Lands</Link>
+        <Link to="/rentalhouses">Rental Houses</Link>
+      </nav>
+      <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
+        {show ? <CloseIcon /> : <MenuIcon />}
+      </button>
+      {/* <div className="search">
           <input placeholder="search" type="text" />
           <SearchIcon className="searchicon" />
         </div> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 }
