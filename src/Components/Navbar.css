@@ -36,12 +36,20 @@
     justify-content: left;
     padding: 16px 32px
 } */
-nav > a {
+/* nav > a {
     color: white;
     font-weight: bolder;
     margin-right: 20px;
     padding: 10px;
     text-decoration-line: underline;
+} */
+nav > a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
 }
 nav > a:hover {
     color: rgb(243, 202, 125);
@@ -57,7 +65,7 @@ nav > a:hover {
     opacity: 0;
     font-size: 1.8rem;
 } */
-.search {
+/* .search {
     justify-content: right;
     padding: 10px;
     display: flex;
@@ -79,7 +87,7 @@ nav > a:hover {
     display: flex;
     background-color: orange;
     justify-content: space-between;
-}
+} */
 @media only screen and (max-width: 768px){
     /* .mobile-nav{
         border:solid 2px red;
