@@ -4,21 +4,23 @@
     align-items: center;
     height: 75px;
     background-color: rgb(65, 64, 64);
+    color: white;
 }
-.title {
+.logo {
     display: flex;
     justify-content: center;
 }
-.title > h2 {
-    height: 22px;
-    color: orange;
-    margin-right: 10px;
+.logo > h2 {
+    /* height: 22px; */
+    color: white;
+    /* margin-right: 10px; */
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
-.title > img {
-    width: 6%;
+.logo > img {
+    width: 15%;
     object-fit: cover;
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
 }
 nav {
     display: flex;

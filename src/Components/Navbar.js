@@ -18,8 +18,8 @@ function Navbar() {
   // };
 
   return (
-    <div>
-      <div className="title">
+    <div className="navbar">
+      <div className="logo">
         <img src={logo} alt="logo" />
         <h2>BIRUK BROKER WORKS</h2>
       </div>
