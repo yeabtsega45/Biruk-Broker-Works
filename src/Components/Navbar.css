@@ -154,4 +154,17 @@ nav > a:hover {
         top: 15px;
         left: 35px;
     }
+    .nav-links {
+        display: none;
+    }
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color:rgb(65, 64, 64);
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
 }
