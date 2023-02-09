@@ -167,4 +167,16 @@ nav > a:hover {
         transition: all 0.5s ease-out;
         width: 100%;
     }
+    nav > a {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+    }
 }
