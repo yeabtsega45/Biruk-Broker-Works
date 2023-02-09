@@ -1,18 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+// import { useRef } from "react";
+import { useState } from "react";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
-import SearchIcon from "@material-ui/icons/Search";
+// import SearchIcon from "@material-ui/icons/Search";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar() {
-  const navRef = useRef();
+  const [show, setShow] = useState(false);
 
-  const showNavbar = () => {
-    navRef.current.classList.toggle("resposive_nav");
-  };
+  // const navRef = useRef();
+
+  // const showNavbar = () => {
+  //   navRef.current.classList.toggle("resposive_nav");
+  // };
 
   return (
     <div>
@@ -21,22 +24,25 @@ function Navbar() {
         <h2>BIRUK BROKER WORKS</h2>
       </div>
       <div className="navandsearch">
-        <nav ref={navRef}>
+        <nav
+          className={show ? "mobile-nav" : "nav"}
+          onClick={() => setShow(false)}
+        >
           <Link to="/">Houses</Link>
           <Link to="/cars">Cars</Link>
           <Link to="/lands">Lands</Link>
           <Link to="/rentalhouses">Rental Houses</Link>
-          <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-            <CloseIcon />
-          </button>
         </nav>
-        <button className="nav-btn" onClick={showNavbar}>
-          <MenuIcon />
+        <button
+          className="nav-btn nav-close-btn"
+          onClick={() => setShow(!show)}
+        >
+          {setShow ? <CloseIcon /> : <MenuIcon />}
         </button>
-        <div className="search">
+        {/* <div className="search">
           <input placeholder="search" type="text" />
           <SearchIcon className="searchicon" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

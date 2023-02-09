@@ -27,6 +27,9 @@ nav > a {
     padding: 10px;
     text-decoration-line: underline;
 }
+nav > a:hover {
+    color: rgb(243, 202, 125);
+}
 .nav-btn {
     padding: 5px;
     cursor: pointer;
@@ -62,21 +65,47 @@ nav > a {
     justify-content: space-between;
 }
 @media only screen and (max-width: 768px){
-    nav{
+    .mobile-nav{
+        border:solid 2px red;
+        display: flex;
+		flex-direction: column;
+
+    }
+    .navandsearch{
+        display:flex;
+        flex-direction: column;
+    }
+    /* nav {
+        position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+		transform: translateY(-100vh);
+        border: 2px solid red;
+    } */
+    /* nav{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
         top: 90px;
-        right: 0px;
+        right: -300px;
         width: 300px;
         height: 100vh;
         background-color: orange;
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
         transform: translateY(-100vh);
-    }
+    } */
     nav > a {
         margin-bottom: 25px;
     }
