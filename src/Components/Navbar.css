@@ -178,5 +178,11 @@ nav > a:hover {
         display: block;
         position: absolute;
         font-size: 30px;
+        color: white;
+        background-color:rgb(65, 64, 64);
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
     }
 }
