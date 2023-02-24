@@ -27,8 +27,8 @@
     width: 50%;
     object-fit: cover;
     /* margin: 0px 10px; */
-    color: white;
-    background-color: rgb(65, 64, 64);
+    /* color: white; */
+    /* background-color: rgb(65, 64, 64); */
 }
 /* nav {
     display: flex;
@@ -115,7 +115,7 @@ nav > a:hover {
         background-color:rgb(65, 64, 64);
         left: 0;
         top: 75px;
-        transition: all 0.5s ease-out;
+        transition: all 3s ease-in-out;
         width: 100%;
     }
     nav > a {
