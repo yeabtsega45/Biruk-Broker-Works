@@ -102,18 +102,22 @@ nav > a:hover {
     .logo {
         display: flex;
         position: absolute;
-        top: 15px;
+        /* top: 15px; */
         left: 35px;
     }
+    /* .logo > img {
+        vertical-align: top;
+    } */
     .nav-links {
         display: none;
     }
     .nav-links-mobile {
         position: absolute;
-        display: block;
+        display: flex;
+        flex-direction: column;
         list-style: none;
         background-color:rgb(65, 64, 64);
-        left: 0;
+        left: -300px;
         top: 75px;
         transition: all 3s ease-in-out;
         width: 100%;
