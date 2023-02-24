@@ -1,6 +1,6 @@
 * {
-    margin: 0;
-    padding: 0;
+    /* margin: 0; */
+    /* padding: 0; */
     box-sizing: border-box;
 }
 .navbar {
@@ -24,15 +24,11 @@
     /* align-items: center; */
 }
 .logo > img {
-    width: 15%;
+    width: 50%;
     object-fit: cover;
     /* margin: 0px 10px; */
-}
-.nav-links {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    width: 75%;
+    color: white;
+    background-color: rgb(65, 64, 64);
 }
 /* nav {
     display: flex;
@@ -70,6 +66,12 @@ nav > a:hover {
     opacity: 0;
     font-size: 1.8rem;
 } */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    width: 75%;
+}
 .mobile-menu-icon {
     display: none;
 }
@@ -97,6 +99,43 @@ nav > a:hover {
     justify-content: space-between;
 } */
 @media only screen and (max-width: 768px){
+    .logo {
+        display: flex;
+        position: absolute;
+        top: 15px;
+        left: 35px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links-mobile {
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color:rgb(65, 64, 64);
+        left: 0;
+        top: 75px;
+        transition: all 0.5s ease-out;
+        width: 100%;
+    }
+    nav > a {
+        color: white;
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        background-color:rgb(65, 64, 64);
+        border: none;
+        outline: none;
+        top: 15px;
+        right: 25px;
+    }
     /* .mobile-nav{
         border:solid 2px red;
         display: flex;
@@ -153,41 +192,4 @@ nav > a:hover {
         top: 2rem;
         right: 2rem;
     } */
-    .logo {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        left: 35px;
-    }
-    .nav-links {
-        display: none;
-    }
-    .nav-links-mobile {
-        position: absolute;
-        display: block;
-        list-style: none;
-        background-color:rgb(65, 64, 64);
-        left: 0;
-        top: 75px;
-        transition: all 0.5s ease-out;
-        width: 100%;
-    }
-    nav > a {
-        color: white;
-        text-align: center;
-        padding: 32px;
-        width: 100%;
-        transition: all 0.5s ease;
-    }
-    .mobile-menu-icon {
-        display: block;
-        position: absolute;
-        font-size: 30px;
-        color: white;
-        background-color:rgb(65, 64, 64);
-        border: none;
-        outline: none;
-        top: 15px;
-        right: 25px;
-    }
 }

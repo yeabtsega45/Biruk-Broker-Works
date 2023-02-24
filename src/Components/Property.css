@@ -20,9 +20,9 @@
 }
 .large {
     font-size: larger;
-    color: orange;
+    /* color: rgb(65, 64, 64); */
 }
 .small {
     color: #636363;
-    font-size: small;
+    /* font-size: small; */
 }

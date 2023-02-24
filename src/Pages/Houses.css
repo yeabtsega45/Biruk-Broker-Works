@@ -4,8 +4,8 @@
     object-fit: cover;
 }
 .houses > h1 {
-    color: orange;
-    border-bottom: 1px solid orange;
+    color: rgb(65, 64, 64);
+    border-bottom: 1px solid rgb(65, 64, 64);
 }
 .properties {
     display: flex;

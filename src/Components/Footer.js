@@ -6,14 +6,14 @@ import "./Footer.css";
 import PersonIcon from "@material-ui/icons/Person";
 import PhoneIcon from "@material-ui/icons/Phone";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo3.png";
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer_logo">
         <img src={logo} alt="logo" />
-        <h2>BIRUK BROKER WORKS</h2>
+        {/* <h2>BIRUK BROKER WORKS</h2> */}
       </div>
       <div>
         <div className="info">

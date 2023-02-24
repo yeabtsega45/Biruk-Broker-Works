@@ -7,9 +7,9 @@ function Property({ image, type, location, area, rooms, price }) {
       {/* <ImageSlider={ImS} /> */}
       <img src={image} className="images" alt="house" />
       <p className="large">{type}</p>
-      <p>{location}</p>
-      <p>{area}</p>
-      <p>{rooms}</p>
+      <p className="small">{location}</p>
+      <p className="small">{area}</p>
+      <p className="small">{rooms}</p>
       <p className="large">{price}</p>
     </div>
   );
