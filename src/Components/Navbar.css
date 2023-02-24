@@ -117,9 +117,10 @@ nav > a:hover {
         flex-direction: column;
         list-style: none;
         background-color:rgb(65, 64, 64);
+        /* width: 300px; */
         left: -300px;
         top: 75px;
-        transition: all 3s ease-in-out;
+        transition: all 0.5s ease-in-out;
         width: 100%;
     }
     nav > a {
@@ -127,7 +128,7 @@ nav > a:hover {
         text-align: center;
         padding: 32px;
         width: 100%;
-        transition: all 0.5s ease;
+        transition: all 0.5s ease-in-out;
     }
     .mobile-menu-icon {
         display: block;
