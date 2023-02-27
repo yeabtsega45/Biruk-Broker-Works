@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { useRef } from "react";
 import { useState } from "react";
 import "./Navbar.css";
@@ -28,10 +28,10 @@ function Navbar() {
         className={show ? "nav-links" : "nav-links-mobile"}
         onClick={() => setShow(true)}
       >
-        <Link to="/">Houses</Link>
-        <Link to="/cars">Cars</Link>
-        <Link to="/lands">Lands</Link>
-        <Link to="/rentalhouses">Rental Houses</Link>
+        <NavLink to="/">Houses</NavLink>
+        <NavLink to="/cars">Cars</NavLink>
+        <NavLink to="/lands">Lands</NavLink>
+        <NavLink to="/rentalhouses">Rental Houses</NavLink>
       </nav>
       <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
         {show ? <MenuIcon /> : <CloseIcon />}
