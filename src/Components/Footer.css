@@ -41,3 +41,6 @@
     color: whitesmoke;
     padding: 0;
 }
+.icon:hover {
+    color: rgb(86, 86, 252);
+}
