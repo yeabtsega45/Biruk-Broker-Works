@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -99,6 +101,9 @@ nav > a:hover {
     justify-content: space-between;
 } */
 @media only screen and (max-width: 768px){
+    .navbar {
+        position: relative;
+    }
     .logo {
         display: flex;
         position: absolute;
@@ -117,7 +122,7 @@ nav > a:hover {
         flex-direction: column;
         list-style: none;
         background-color:rgb(65, 64, 64);
-        /* width: 300px; */
+        width: 300px;
         left: -300px;
         top: 75px;
         transition: all 0.5s ease-in-out;
