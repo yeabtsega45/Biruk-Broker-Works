@@ -22,7 +22,7 @@ function Footer() {
         </div>
         <div className="info">
           <PhoneIcon />
-          <p>+251963137715</p>
+          <a href="tel:+251963137715">+251963137715</a>
         </div>
         <div className="info">
           <LocationOnIcon />

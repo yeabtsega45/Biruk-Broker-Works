@@ -27,6 +27,13 @@
     align-items: center;
     margin: -10px 0px;
 }
+.info > a {
+    color: white;
+    text-decoration: none;
+}
+.info > a:hover {
+    color: rgb(86, 86, 252);
+}
 .icon {
     margin: 10px 10px;
     /* background-color: #005ea2; */

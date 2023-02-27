@@ -26,7 +26,7 @@ function Navbar() {
       {/* <div className="navandsearch"> */}
       <nav
         className={show ? "nav-links" : "nav-links-mobile"}
-        onClick={() => setShow(false)}
+        onClick={() => setShow(true)}
       >
         <Link to="/">Houses</Link>
         <Link to="/cars">Cars</Link>
