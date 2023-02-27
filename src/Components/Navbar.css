@@ -122,10 +122,12 @@ nav > a:hover {
         flex-direction: column;
         list-style: none;
         background-color:rgb(65, 64, 64);
-        width: 300px;
+        /* width: 300px; */
         left: -300px;
         top: 75px;
         transition: all 0.5s ease-in-out;
+        /* transform: translateY(-100vh); */
+        /* height: 100vh; */
         width: 100%;
     }
     nav > a {
