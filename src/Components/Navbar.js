@@ -28,7 +28,9 @@ function Navbar() {
         className={show ? "nav-links" : "nav-links-mobile"}
         onClick={() => setShow(true)}
       >
-        <NavLink to="/">Houses</NavLink>
+        <NavLink to="/" activeClassName="active-link">
+          Houses
+        </NavLink>
         <NavLink to="/cars">Cars</NavLink>
         <NavLink to="/lands">Lands</NavLink>
         <NavLink to="/rentalhouses">Rental Houses</NavLink>
