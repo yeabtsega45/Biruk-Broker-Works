@@ -1,4 +1,6 @@
 import React from "react";
+// import { Carousel } from "react-responsive-carousel";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Houses.css";
 import img1 from "../Assets/frontpage.jpg";
 import img11 from "../Assets/frontpage2.webp";
@@ -23,6 +25,7 @@ function Houses() {
         <ImageSlider slides={slides} />
       </div> */}
       <div className="properties">
+        {/* <Carousel></Carousel> */}
         <Property
           image={img5}
           type="town house"
