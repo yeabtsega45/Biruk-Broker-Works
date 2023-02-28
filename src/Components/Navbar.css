@@ -70,9 +70,10 @@ nav a.active {
     justify-content: space-between;
 } */
 @media only screen and (max-width: 768px){
-    /* .navbar {
-        position: relative;
-    } */
+    .navbar {
+        /* position: relative; */
+        transition: all 0.5s ease-in-out;
+    }
     .logo {
         display: flex;
         /* position: absolute; */
@@ -88,13 +89,14 @@ nav a.active {
         flex-direction: column;
         background-color:rgb(65, 64, 64);
         top: 75px;
-        /* transition: all 0.5s ease-in-out; */
         width: 100%;
+        transition: all 0.5s ease-in-out;
     }
     nav > a {
         color: white;
         text-align: center;
         width: 100%;
+        margin: 0px;
         transition: all 0.5s ease-in-out;
     }
     .mobile-menu-icon {
@@ -107,6 +109,7 @@ nav a.active {
         outline: none;
         top: 15px;
         right: 25px;
+        transition: all 0.5s ease-in-out;
     }
     /* .nav-links-mobile {
         display: flex;
