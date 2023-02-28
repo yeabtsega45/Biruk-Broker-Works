@@ -17,9 +17,9 @@ function Property({
     <div className="property">
       {/* <ImageSlider={ImS} /> */}
       <Carousel>
-        <img src={image} className="images" alt="house" />
-        <img src={image2} className="images" alt="house" />
-        <img src={image3} className="images" alt="house" />
+        <img src={image} className="images" alt="no_image" />
+        <img src={image2} className="images" alt="no_image" />
+        <img src={image3} className="images" alt="no_image" />
       </Carousel>
       <p className="large">{type}</p>
       <p className="small">{location}</p>
