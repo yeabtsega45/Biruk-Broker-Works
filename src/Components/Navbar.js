@@ -31,7 +31,7 @@ function Navbar() {
         <NavLink to="/">Houses</NavLink>
         <NavLink to="/cars">Cars</NavLink>
         <NavLink to="/lands">Lands</NavLink>
-        <NavLink to="/rentalhouses">Rental Houses</NavLink>
+        <NavLink to="/rentalhouses">Rental_Houses</NavLink>
       </nav>
       <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
         {show ? <MenuIcon /> : <CloseIcon />}
