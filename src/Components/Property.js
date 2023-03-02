@@ -16,7 +16,7 @@ function Property({
   return (
     <div className="property">
       {/* <ImageSlider={ImS} /> */}
-      <Carousel>
+      <Carousel className="carousel">
         <img src={image} className="images" alt="no_image" />
         <img src={image2} className="images" alt="no_image" />
         <img src={image3} className="images" alt="no_image" />

@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 .navbar {
-    /* position: sticky; */
-    /* top: 0; */
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
