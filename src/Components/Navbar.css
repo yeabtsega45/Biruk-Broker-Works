@@ -10,6 +10,7 @@
     height: 75px;
     background-color: rgb(65, 64, 64);
     color: white;
+    /* transition: all 0.5s ease-in-out; */
 }
 .logo {
     display: flex;
@@ -42,6 +43,8 @@ nav a.active {
     justify-content: flex-end;
     list-style: none;
     width: 75%;
+    /* transition: all 0.5s ease-in-out; */
+    /* height: 50px; */
 }
 .mobile-menu-icon {
     display: none;
@@ -50,7 +53,7 @@ nav a.active {
 @media only screen and (max-width: 768px){
     .navbar {
         /* position: relative; */
-        transition: all 0.5s ease-in-out;
+        /* transition: all 0.5s ease-in-out; */
     }
     .logo {
         display: flex;
@@ -59,7 +62,11 @@ nav a.active {
         /* left: 35px; */
     }
     .nav-links {
-        display: none;
+        /* display: none; */
+        visibility: hidden;
+        /* transition: all 0.5s ease-in-out; */
+        /* width: 0%; */
+        height: 0%;
     }
     .nav-links-mobile {
         position: absolute;
@@ -68,14 +75,16 @@ nav a.active {
         background-color:rgb(65, 64, 64);
         top: 75px;
         width: 100%;
+        height: 100%;
         transition: all 0.5s ease-in-out;
+        /* height: 200px; */
     }
     nav > a {
         color: white;
         text-align: center;
         width: 100%;
         margin: 0px;
-        transition: all 0.5s ease-in-out;
+        /* transition: all 0.5s ease-in-out; */
     }
     .mobile-menu-icon {
         display: block;
@@ -87,7 +96,7 @@ nav a.active {
         outline: none;
         top: 15px;
         right: 25px;
-        transition: all 0.5s ease-in-out;
+        /* transition: all 0.5s ease-in-out; */
     }
     /* .nav-links-mobile {
         display: flex;
