@@ -36,4 +36,12 @@ const PropertyData = [
     rooms: "beds:3, bath:1",
     price: "2,500,000 br",
   },
+  {
+    image: img6,
+    type: "town house",
+    location: "Bole Wolosefer Addis Ababa",
+    area: "150 m2",
+    rooms: "beds:3, bath:1",
+    price: "2,500,000 br",
+  },
 ];
