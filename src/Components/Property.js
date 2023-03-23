@@ -3,16 +3,9 @@ import "./Property.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-function Property({
-  image,
-  image2,
-  image3,
-  type,
-  location,
-  area,
-  rooms,
-  price,
-}) {
+function Property(props) {
+  const { image, image2, image3, type, location, area, rooms, price } =
+    props.data;
   return (
     <div className="property">
       <Carousel className="carousel">
