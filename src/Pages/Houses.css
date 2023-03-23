@@ -6,6 +6,7 @@
 .houses > h1 {
     color: rgb(65, 64, 64);
     border-bottom: 1px solid rgb(65, 64, 64);
+    text-align: center;
 }
 .properties {
     display: flex;
@@ -13,9 +14,16 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    margin: auto;
 }
 /* .slidercontainer {
     width: 500px;
     height: 280px;
     margin: 0 auto;
 } */
+
+@media screen and (max-width: 768px) {
+    .houses > img {
+        height: 140px;
+    } 
+}

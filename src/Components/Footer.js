@@ -15,30 +15,32 @@ function Footer() {
         <img src={logo} alt="logo" />
         {/* <h2>BIRUK BROKER WORKS</h2> */}
       </div>
-      <div>
-        <div className="info">
-          <PersonIcon />
-          <p>Biruk Sisay</p>
+      <div className="footer-container">
+        <div>
+          <div className="info">
+            <PersonIcon />
+            <p>Biruk Sisay</p>
+          </div>
+          <div className="info">
+            <PhoneIcon />
+            <a href="tel:+251963137715">+251963137715</a>
+          </div>
+          <div className="info">
+            <LocationOnIcon />
+            <p>Addis Ababa, Yeka, Kotebe</p>
+          </div>
         </div>
-        <div className="info">
-          <PhoneIcon />
-          <a href="tel:+251963137715">+251963137715</a>
+        <div className="footer-icons">
+          <a href="https://www.facebook.com/">
+            <FacebookIcon className="icon" />
+          </a>
+          <a href="https://mail.google.com">
+            <EmailIcon className="icon" />
+          </a>
+          <a href="https://telegram.org/">
+            <TelegramIcon className="icon" />
+          </a>
         </div>
-        <div className="info">
-          <LocationOnIcon />
-          <p>Addis Ababa, Yeka, Kotebe</p>
-        </div>
-      </div>
-      <div>
-        <a href="https://www.facebook.com/">
-          <FacebookIcon className="icon" />
-        </a>
-        <a href="https://mail.google.com">
-          <EmailIcon className="icon" />
-        </a>
-        <a href="https://telegram.org/">
-          <TelegramIcon className="icon" />
-        </a>
       </div>
     </div>
   );
