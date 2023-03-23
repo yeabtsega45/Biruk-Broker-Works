@@ -10,8 +10,8 @@ function Houses() {
       <img src={img11} alt="frontpage" />
       <h1>Houses</h1>
       <div className="properties">
-        {PropertyData.map((Property) => (
-          <Property data={Property} />
+        {PropertyData.map((property) => (
+          <Property data={property} />
         ))}
       </div>
     </div>
