@@ -1,5 +1,4 @@
 import img1 from "../Assets/frontpage.jpg";
-import img11 from "../Assets/frontpage2.webp";
 import img2 from "../Assets/house1.1.jpg";
 import img3 from "../Assets/house1.2.jpg";
 import img4 from "../Assets/house1.3.jpg";
@@ -52,4 +51,14 @@ const PropertyData = [
     rooms: "beds:3, bath:1",
     price: "2,500,000 br",
   },
+  {
+    image: img9,
+    type: "apartment",
+    location: "Bole Wolosefer Addis Ababa",
+    area: "3350 m2",
+    rooms: "beds:3, bath:1",
+    price: "2,500,000 br",
+  },
 ];
+
+export default PropertyData;
