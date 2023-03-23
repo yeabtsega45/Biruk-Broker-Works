@@ -2,6 +2,7 @@ import React from "react";
 import "./Houses.css";
 import img11 from "../Assets/frontpage2.webp";
 import Property from "../Components/Property";
+import PropertyData from "../PropertyData";
 
 function Houses() {
   return (
@@ -9,7 +10,9 @@ function Houses() {
       <img src={img11} alt="frontpage" />
       <h1>Houses</h1>
       <div className="properties">
-        <Property />
+        {PropertyData.map((Property) => (
+          <Property data={Property} />
+        ))}
       </div>
     </div>
   );
