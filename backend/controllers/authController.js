@@ -2,6 +2,7 @@ const authController = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const verifyToken = require("../middlewares/verifyToken");
 
 authController.post("/register", async (req, res) => {
   try {
@@ -50,6 +51,11 @@ authController.post("/login", async (req, res) => {
   } catch (error) {
     return res.status(500).json({ error: "Wrong credentials. Try again!" });
   }
+});
+
+//protected route
+authController.get("/admin", verifyToken, (req, res) => {
+  return res.json({ Status: "Success", id: req.id });
 });
 
 module.exports = authController;

@@ -23,7 +23,10 @@ function Login() {
           setError(res.data.error);
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        setError("Wrong password");
+        console.log(err);
+      });
   };
 
   return (
