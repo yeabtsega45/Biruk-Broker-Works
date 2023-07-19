@@ -20,7 +20,7 @@ authController.post("/register", async (req, res) => {
 
     const { password, ...others } = newUser._doc;
     const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
-      expiresIn: "14d",
+      expiresIn: "1d",
     });
 
     return res.status(201).json({ others, token });
