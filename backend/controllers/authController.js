@@ -48,7 +48,7 @@ authController.post("/login", async (req, res) => {
 
     return res.status(200).json({ others, token });
   } catch (error) {
-    return res.status(500).json(error.message);
+    return res.status(500).json({ error: "Wrong credentials. Try again!" });
   }
 });
 

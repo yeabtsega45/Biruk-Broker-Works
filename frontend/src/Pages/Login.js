@@ -17,10 +17,10 @@ function Login() {
     axios
       .post("http://localhost:5000/auth/login", values)
       .then((res) => {
-        if (res.data.Status === "Success") {
-          navigate("/");
+        if (res.status === 200) {
+          navigate("/admin");
         } else {
-          setError(res.data.Error);
+          setError(res.data.error);
         }
       })
       .catch((err) => console.log(err));
@@ -29,7 +29,7 @@ function Login() {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="text-danger">{error && error}</div>
+        <div className="text-danger">{error}</div>
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
           <input

@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Houses from "./Pages/Houses";
 import Footer from "./Components/Footer";
 import Login from "./Pages/Login";
+import Admin from "./Pages/Admin";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </>
   );
