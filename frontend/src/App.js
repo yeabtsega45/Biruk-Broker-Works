@@ -9,12 +9,19 @@ import Login from "./Pages/Login";
 function App() {
   return (
     <>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Houses />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Houses />
+              <Footer />
+            </>
+          }
+        />
         <Route path="/login" element={<Login />} />
       </Routes>
-      <Footer />
     </>
   );
 }

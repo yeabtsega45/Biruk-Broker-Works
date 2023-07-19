@@ -4,7 +4,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url('../../Assets/estate2.jpg');
+    background-image: url('../Assets/estate2.jpg');
     background-color: rgba(0, 0, 0, 0.2);
     background-size: cover;
     background-blend-mode: darken;
@@ -73,6 +73,10 @@ form>button:hover {
     background-color: #fff;
     border-color: blue;
     color: blue;
+}
+
+.text-danger {
+    color: red;
 }
 
 /* RESPONSIVE */
