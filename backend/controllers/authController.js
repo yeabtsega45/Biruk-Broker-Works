@@ -55,7 +55,7 @@ authController.post("/login", async (req, res) => {
 
 //protected route
 authController.get("/admin", verifyToken, (req, res) => {
-  return res.json({ Status: "Success", id: req.id });
+  return res.json({ Status: "Success" });
 });
 
 module.exports = authController;
