@@ -4,98 +4,102 @@ import { useNavigate } from "react-router-dom";
 
 function AddProperty() {
   const [data, setData] = useState({
-    name: "",
-    email: "",
-    password: "",
-    address: "",
-    salary: "",
+    type: "",
+    location: "",
+    area: "",
+    rooms: "",
+    price: "",
     image: "",
+    image2: "",
+    image3: "",
   });
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formdata = new FormData();
-    formdata.append("name", data.name);
-    formdata.append("email", data.email);
-    formdata.append("password", data.password);
-    formdata.append("address", data.address);
-    formdata.append("salary", data.salary);
-    formdata.append("image", data.image);
+    formdata.append("type", data.type);
+    formdata.append("location", data.location);
+    formdata.append("area", data.area);
+    formdata.append("rooms", data.rooms);
+    formdata.append("price", data.price);
+    formdata.append("img", data.image);
+    formdata.append("img2", data.image2);
+    formdata.append("img3", data.image3);
     axios
-      .post("http://localhost:8081/create", formdata)
+      .post("http://localhost:5000/create", formdata)
       .then((res) => {
-        navigate("/employee");
+        navigate("/admin");
         console.log(res);
       })
       .catch((err) => console.log(err));
   };
   return (
     <div className="d-flex flex-column align-items-center pt-4">
-      <h2>Add Employee</h2>
+      <h2>Add Property</h2>
       <form className="row g-3 w-50" onSubmit={handleSubmit}>
         <div className="col-12">
-          <label htmlFor="inputName" className="form-label">
-            Name
+          <label htmlFor="inputType" className="form-label">
+            Type
           </label>
           <input
             type="text"
             className="form-control"
-            id="inputName"
-            placeholder="Enter Name"
+            id="inputType"
+            placeholder="Enter Type"
             autoComplete="off"
-            onChange={(e) => setData({ ...data, name: e.target.value })}
+            onChange={(e) => setData({ ...data, type: e.target.value })}
           />
         </div>
         <div className="col-12">
-          <label htmlFor="inputEmail4" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="inputEmail4"
-            placeholder="Enter Email"
-            autoComplete="off"
-            onChange={(e) => setData({ ...data, email: e.target.value })}
-          />
-        </div>
-        <div className="col-12">
-          <label htmlFor="inputPassword4" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="inputPassword4"
-            placeholder="Enter Password"
-            onChange={(e) => setData({ ...data, password: e.target.value })}
-          />
-        </div>
-        <div className="col-12">
-          <label htmlFor="inputSalary" className="form-label">
-            Salary
+          <label htmlFor="inputLocation" className="form-label">
+            Location
           </label>
           <input
             type="text"
             className="form-control"
-            id="inputSalary"
+            id="inputLocation"
+            placeholder="Enter Location"
+            autoComplete="off"
+            onChange={(e) => setData({ ...data, location: e.target.value })}
+          />
+        </div>
+        <div className="col-12">
+          <label htmlFor="inputRooms" className="form-label">
+            Rooms
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="inputRooms"
+            placeholder="Enter Rooms"
+            onChange={(e) => setData({ ...data, rooms: e.target.value })}
+          />
+        </div>
+        <div className="col-12">
+          <label htmlFor="inputPrice" className="form-label">
+            Price
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="inputPrice"
             placeholder="Enter Salary"
             autoComplete="off"
-            onChange={(e) => setData({ ...data, salary: e.target.value })}
+            onChange={(e) => setData({ ...data, price: e.target.value })}
           />
         </div>
         <div className="col-12">
-          <label htmlFor="inputAddress" className="form-label">
-            Address
+          <label htmlFor="inputArea" className="form-label">
+            Area
           </label>
           <input
             type="text"
             className="form-control"
-            id="inputAddress"
+            id="inputArea"
             placeholder="1234 Main St"
             autoComplete="off"
-            onChange={(e) => setData({ ...data, address: e.target.value })}
+            onChange={(e) => setData({ ...data, area: e.target.value })}
           />
         </div>
         <div className="col-12 mb-3">
