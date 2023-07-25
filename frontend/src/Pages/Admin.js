@@ -5,14 +5,18 @@ import axios from "axios";
 function Admin() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
-  useEffect((navigate) => {
-    axios.get("http://localhost:5000/auth/admin").then((res) => {
-      if (res.data.Status === "Success") {
-        navigate("/admin");
-      } else {
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/auth/admin")
+      .then((res) => {
+        if (res.data.Status === "Success") {
+          navigate("/admin");
+        }
+      })
+      .catch((err) => {
         navigate("/login");
-      }
-    });
+        console.log(err);
+      });
   }, []);
   return (
     <div>

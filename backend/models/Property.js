@@ -7,14 +7,8 @@ const PropertySchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
-    title: {
-      type: String,
-      required: true,
-      min: 6,
-    },
     type: {
       type: String,
-      enum: ["beach", "mountain", "village"],
       required: true,
     },
     desc: {
@@ -26,20 +20,28 @@ const PropertySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    img2: {
+      type: String,
+      required: true,
+    },
+    img3: {
+      type: String,
+      required: true,
+    },
     price: {
       type: Number,
       required: true,
     },
-    sqmeters: {
+    area: {
       type: Number,
       required: true,
       min: 15,
     },
-    continent: {
+    location: {
       type: String,
       required: true,
     },
-    beds: {
+    rooms: {
       type: Number,
       required: true,
       min: 1,
