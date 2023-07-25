@@ -6,6 +6,7 @@ import Houses from "./Pages/Houses";
 import Footer from "./Components/Footer";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
+import AddProperty from "./Pages/AddProperty";
 
 function App() {
   return (
@@ -22,7 +23,10 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<Admin />}>
+          <Route path="/add" element={<AddProperty />} />
+          <Route path="/edit" element={<Login />} />
+        </Route>
       </Routes>
     </>
   );

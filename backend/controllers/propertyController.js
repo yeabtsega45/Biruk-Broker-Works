@@ -17,7 +17,7 @@ propertyController.get("/getAll", async (req, res) => {
 });
 
 // create property
-propertyController.post("/", verifyToken, async (req, res) => {
+propertyController.post("/create", verifyToken, async (req, res) => {
   try {
     const newProperty = await Property.create({
       ...req.body,
@@ -31,7 +31,7 @@ propertyController.post("/", verifyToken, async (req, res) => {
 });
 
 // update property
-propertyController.put("/:id", verifyToken, async (req, res) => {
+propertyController.put("/update/:id", verifyToken, async (req, res) => {
   try {
     const property = await Property.findById(req.params.id);
     if (property.currentOwner.toString() !== req.user.id) {
@@ -53,7 +53,7 @@ propertyController.put("/:id", verifyToken, async (req, res) => {
 });
 
 // delete property
-propertyController.delete("/:id", verifyToken, async (req, res) => {
+propertyController.delete("/delete/:id", verifyToken, async (req, res) => {
   try {
     const property = await Property.findById(req.params.id);
     if (property.currentOwner.toString() !== req.user.id) {
