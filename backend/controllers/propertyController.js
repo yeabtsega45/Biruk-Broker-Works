@@ -51,3 +51,21 @@ propertyController.put("/:id", verifyToken, async (req, res) => {
     return res.status(500).json(error);
   }
 });
+
+// delete property
+propertyController.delete("/:id", verifyToken, async (req, res) => {
+  try {
+    const property = await Property.findById(req.params.id);
+    if (property.currentOwner.toString() !== req.user.id) {
+      throw new Error("You are not allowed to delete other people properties");
+    }
+
+    await property.deleteOne();
+
+    return res.status(200).json({ msg: "Successfully deleted property" });
+  } catch (error) {
+    return res.status(500).json(error);
+  }
+});
+
+module.exports = propertyController;
