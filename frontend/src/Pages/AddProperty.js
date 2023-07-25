@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function AddProperty() {
   const [data, setData] = useState({
@@ -27,7 +28,7 @@ function AddProperty() {
     formdata.append("img2", data.image2);
     formdata.append("img3", data.image3);
     axios
-      .post("http://localhost:5000/create", formdata)
+      .post("http://localhost:5000/property/create", formdata)
       .then((res) => {
         navigate("/admin");
         console.log(res);

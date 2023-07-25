@@ -16,17 +16,15 @@ const PropertySchema = new mongoose.Schema(
       required: true,
       min: 50,
     },
-    img: {
+    image: {
       type: String,
       required: true,
     },
-    img2: {
+    image2: {
       type: String,
-      required: true,
     },
-    img3: {
+    image3: {
       type: String,
-      required: true,
     },
     price: {
       type: Number,

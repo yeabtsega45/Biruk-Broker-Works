@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
 import AddProperty from "./Pages/AddProperty";
+import EditProperty from "./Pages/EditProperty";
 
 function App() {
   return (
@@ -23,10 +24,9 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />}>
-          <Route path="/add" element={<AddProperty />} />
-          <Route path="/edit" element={<Login />} />
-        </Route>
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/add" element={<AddProperty />} />
+        <Route path="/edit/:id" element={<EditProperty />} />
       </Routes>
     </>
   );

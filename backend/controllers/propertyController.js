@@ -4,7 +4,7 @@ const User = require("../models/User");
 const propertyController = require("express").Router();
 
 // get all
-propertyController.get("/getAll", async (req, res) => {
+propertyController.get("/getall", async (req, res) => {
   try {
     const properties = await Property.find({});
 

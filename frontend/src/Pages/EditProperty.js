@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function EditEmployee() {
+function EditProperty() {
   const [data, setData] = useState({
     type: "",
     location: "",
@@ -143,4 +144,4 @@ function EditEmployee() {
   );
 }
 
-export default EditEmployee;
+export default EditProperty;
