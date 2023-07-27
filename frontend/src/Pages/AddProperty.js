@@ -15,6 +15,7 @@ function AddProperty() {
     image3: "",
   });
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,10 +29,14 @@ function AddProperty() {
     formdata.append("img2", data.image2);
     formdata.append("img3", data.image3);
     axios
-      .post("http://localhost:5000/property/create", formdata)
+      .post("http://localhost:5000/property/create", formdata, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
       .then((res) => {
-        navigate("/admin");
-        console.log(res);
+        navigate("/");
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };

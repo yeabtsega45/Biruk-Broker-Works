@@ -18,9 +18,8 @@ function Login() {
       .post("http://localhost:5000/auth/login", values)
       .then((res) => {
         if (res.status === 200) {
+          localStorage.setItem("token", res.data.token);
           navigate("/admin");
-        } else {
-          setError(res.data.error);
         }
       })
       .catch((err) => {

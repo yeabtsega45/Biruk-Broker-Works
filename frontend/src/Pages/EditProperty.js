@@ -43,7 +43,7 @@ function EditProperty() {
       .put("http://localhost:5000/update/" + id, data)
       .then((res) => {
         if (res.data.Status === "Success") {
-          navigate("/admin");
+          navigate("/");
         }
       })
       .catch((err) => console.log(err));
