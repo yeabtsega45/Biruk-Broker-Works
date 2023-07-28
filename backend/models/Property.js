@@ -11,11 +11,6 @@ const PropertySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desc: {
-      type: String,
-      required: true,
-      min: 50,
-    },
     image: {
       type: String,
       required: true,
@@ -27,22 +22,20 @@ const PropertySchema = new mongoose.Schema(
       type: String,
     },
     price: {
-      type: Number,
+      type: String,
       required: true,
     },
     area: {
-      type: Number,
+      type: String,
       required: true,
-      min: 15,
     },
     location: {
       type: String,
       required: true,
     },
     rooms: {
-      type: Number,
+      type: String,
       required: true,
-      min: 1,
     },
   },
   { timestamps: true }

@@ -19,19 +19,25 @@ function AddProperty() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(data);
     const formdata = new FormData();
     formdata.append("type", data.type);
     formdata.append("location", data.location);
     formdata.append("area", data.area);
     formdata.append("rooms", data.rooms);
     formdata.append("price", data.price);
-    formdata.append("img", data.image);
-    formdata.append("img2", data.image2);
-    formdata.append("img3", data.image3);
+    formdata.append("image", data.image);
+    formdata.append("image2", data.image2);
+    formdata.append("image3", data.image3);
+    console.log(formdata);
     axios
-      .post("http://localhost:5000/property/create", formdata, {
+      .request({
+        method: "POST",
+        url: "http://localhost:5000/property/create",
+        data: formdata,
         headers: {
           Authorization: "Bearer " + token,
+          "Content-Type": "multipart/form-data",
         },
       })
       .then((res) => {
@@ -51,10 +57,14 @@ function AddProperty() {
           <input
             type="text"
             className="form-control"
+            name="type"
             id="inputType"
             placeholder="Enter Type"
             autoComplete="off"
-            onChange={(e) => setData({ ...data, type: e.target.value })}
+            onChange={(e) => {
+              setData({ ...data, type: e.target.value });
+              console.log(data);
+            }}
           />
         </div>
         <div className="col-12">
@@ -64,6 +74,7 @@ function AddProperty() {
           <input
             type="text"
             className="form-control"
+            name="location"
             id="inputLocation"
             placeholder="Enter Location"
             autoComplete="off"
@@ -77,6 +88,7 @@ function AddProperty() {
           <input
             type="text"
             className="form-control"
+            name="rooms"
             id="inputRooms"
             placeholder="Enter Rooms"
             onChange={(e) => setData({ ...data, rooms: e.target.value })}
@@ -89,6 +101,7 @@ function AddProperty() {
           <input
             type="text"
             className="form-control"
+            name="price"
             id="inputPrice"
             placeholder="Enter Salary"
             autoComplete="off"
@@ -102,6 +115,7 @@ function AddProperty() {
           <input
             type="text"
             className="form-control"
+            name="area"
             id="inputArea"
             placeholder="1234 Main St"
             autoComplete="off"
@@ -115,6 +129,31 @@ function AddProperty() {
           <input
             type="file"
             className="form-control"
+            name="image"
+            id="inputGroupFile01"
+            onChange={(e) => setData({ ...data, image: e.target.files[0] })}
+          />
+        </div>
+        <div className="col-12 mb-3">
+          <label className="form-label" htmlFor="inputGroupFile01">
+            Select Image
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            name="image2"
+            id="inputGroupFile01"
+            onChange={(e) => setData({ ...data, image: e.target.files[0] })}
+          />
+        </div>
+        <div className="col-12 mb-3">
+          <label className="form-label" htmlFor="inputGroupFile01">
+            Select Image
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            name="image3"
             id="inputGroupFile01"
             onChange={(e) => setData({ ...data, image: e.target.files[0] })}
           />
