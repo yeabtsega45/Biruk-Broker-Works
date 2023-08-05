@@ -18,7 +18,7 @@ propertyController.get("/getall", async (req, res) => {
 
 // create property
 propertyController.post("/create", verifyToken, async (req, res) => {
-  console.log("data is coming", req.body);
+  // console.log("data is coming", req.body);
   try {
     const newProperty = await Property.create({
       ...req.body,

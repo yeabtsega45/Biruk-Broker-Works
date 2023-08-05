@@ -5,14 +5,11 @@ const connectDb = require("./config/connectDb");
 const authController = require("./controllers/authController");
 const propertyController = require("./controllers/propertyController");
 const uploadController = require("./controllers/uploadController");
-const bodyParser = require("body-parser");
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
 connectDb();
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     origin: ["http://localhost:3000"],

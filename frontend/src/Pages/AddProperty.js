@@ -42,7 +42,7 @@ function AddProperty() {
       })
       .then((res) => {
         navigate("/");
-        console.log(res.data);
+        console.log(res);
       })
       .catch((err) => console.log(err));
   };
@@ -135,27 +135,27 @@ function AddProperty() {
           />
         </div>
         <div className="col-12 mb-3">
-          <label className="form-label" htmlFor="inputGroupFile01">
-            Select Image
+          <label className="form-label" htmlFor="inputGroupFile02">
+            Select Image2
           </label>
           <input
             type="file"
             className="form-control"
             name="image2"
-            id="inputGroupFile01"
-            onChange={(e) => setData({ ...data, image: e.target.files[0] })}
+            id="inputGroupFile02"
+            onChange={(e) => setData({ ...data, image2: e.target.files[0] })}
           />
         </div>
         <div className="col-12 mb-3">
-          <label className="form-label" htmlFor="inputGroupFile01">
-            Select Image
+          <label className="form-label" htmlFor="inputGroupFile03">
+            Select Image3
           </label>
           <input
             type="file"
             className="form-control"
             name="image3"
-            id="inputGroupFile01"
-            onChange={(e) => setData({ ...data, image: e.target.files[0] })}
+            id="inputGroupFile03"
+            onChange={(e) => setData({ ...data, image3: e.target.files[0] })}
           />
         </div>
         <div className="col-12">

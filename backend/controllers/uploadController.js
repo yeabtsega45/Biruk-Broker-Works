@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
     cb(null, "public/images");
   },
   filename: (req, file, cb) => {
-    cb(null, req.body.filename);
+    cb(null, file.originalname);
   },
 });
 
@@ -14,12 +14,22 @@ const upload = multer({
   storage: storage,
 });
 
-uploadController.post("/image", upload.single("image"), async (req, res) => {
-  try {
-    return res.status(200).json("File uploded successfully");
-  } catch (error) {
-    console.error(error);
+uploadController.post(
+  "/create",
+  upload.fields([
+    { name: "image", maxCount: 1 },
+    { name: "image2", maxCount: 1 },
+    { name: "image3", maxCount: 1 },
+  ]),
+  async (req, res) => {
+    try {
+      console.log(req.body);
+      console.log(req.files);
+      return res.status(200).json("Property created successfully");
+    } catch (error) {
+      console.error(error);
+    }
   }
-});
+);
 
 module.exports = uploadController;
