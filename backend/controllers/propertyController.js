@@ -41,6 +41,8 @@ propertyController.post(
   ]),
   async (req, res) => {
     try {
+      // console.log(req.body);
+      // console.log(req.files);
       const newProperty = await Property.create({
         type: req.body.type,
         location: req.body.location,

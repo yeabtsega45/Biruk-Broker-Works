@@ -23,8 +23,6 @@ uploadController.post(
   ]),
   async (req, res) => {
     try {
-      console.log(req.body);
-      console.log(req.files);
       return res.status(200).json("Property created successfully");
     } catch (error) {
       console.error(error);
