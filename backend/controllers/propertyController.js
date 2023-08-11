@@ -17,6 +17,24 @@ propertyController.get("/getall", async (req, res) => {
   }
 });
 
+// get individual properties
+propertyController.get("/get/:id", async (req, res) => {
+  try {
+    const property = await Property.findById(req.params.id).populate(
+      "currentOwner",
+      "-password"
+    );
+
+    if (!property) {
+      throw new Error("No such property with that id");
+    } else {
+      return res.status(200).json(property);
+    }
+  } catch (error) {
+    return res.status(500).json(error);
+  }
+});
+
 // create property
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function Property(props) {
   const [data, setData] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const token = localStorage.getItem("token");
 
   //get all properties
   useEffect(() => {
@@ -34,7 +35,11 @@ function Property(props) {
   // delete property
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:5000/property/delete/" + id)
+      .delete("http://localhost:5000/property/delete/" + id, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
       .then((res) => {
         if (res.status === 200) {
           window.location.reload(true);

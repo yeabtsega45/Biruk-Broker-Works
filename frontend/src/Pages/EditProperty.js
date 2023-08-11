@@ -17,21 +17,22 @@ function EditProperty() {
 
   const navigate = useNavigate();
   const { id } = useParams();
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/get/" + id)
+      .get("http://localhost:5000/property/get/" + id)
       .then((res) => {
         setData({
           ...data,
-          type: res.data.Result[0].type,
-          location: res.data.Result[0].location,
-          area: res.data.Result[0].area,
-          rooms: res.data.Result[0].rooms,
-          price: res.data.Result[0].price,
-          image: res.data.Result[0].image,
-          image2: res.data.Result[0].image2,
-          image3: res.data.Result[0].image3,
+          type: res.data[0].type,
+          location: res.data[0].location,
+          area: res.data[0].area,
+          rooms: res.data[0].rooms,
+          price: res.data[0].price,
+          image: res.data[0].image,
+          image2: res.data[0].image2,
+          image3: res.data[0].image3,
         });
       })
       .catch((err) => console.log(err));
@@ -39,10 +40,15 @@ function EditProperty() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(data);
     axios
-      .put("http://localhost:5000/update/" + id, data)
+      .put("http://localhost:5000/property/update/" + id, data, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
       .then((res) => {
-        if (res.data.Status === "Success") {
+        if (res.status === 200) {
           navigate("/");
         }
       })
@@ -131,7 +137,31 @@ function EditProperty() {
             className="form-control"
             id="inputGroupFile01"
             onChange={(e) => setData({ ...data, image: e.target.files[0] })}
-            value={data.image}
+            // value={data.image}
+          />
+        </div>
+        <div className="col-12 mb-3">
+          <label className="form-label" htmlFor="inputGroupFile02">
+            Select Image2
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            id="inputGroupFile02"
+            onChange={(e) => setData({ ...data, image2: e.target.files[0] })}
+            // value={data.image2}
+          />
+        </div>
+        <div className="col-12 mb-3">
+          <label className="form-label" htmlFor="inputGroupFile03">
+            Select Image3
+          </label>
+          <input
+            type="file"
+            className="form-control"
+            id="inputGroupFile03"
+            onChange={(e) => setData({ ...data, image3: e.target.files[0] })}
+            // value={data.image3}
           />
         </div>
         <div className="col-12">

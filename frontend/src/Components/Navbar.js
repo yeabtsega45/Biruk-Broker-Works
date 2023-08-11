@@ -10,12 +10,12 @@ function Navbar() {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="navbar">
+    <div className="header">
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
       <nav
-        className={show ? "nav-links" : "nav-links-mobile"}
+        className={show ? "nav-links-computer" : "nav-links-mobile"}
         onClick={() => setShow(true)}
       >
         <NavLink to="/">Houses</NavLink>
