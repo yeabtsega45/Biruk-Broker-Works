@@ -47,10 +47,21 @@ function EditProperty() {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(data);
+    const formdata = new FormData();
+    formdata.append("type", data.type);
+    formdata.append("location", data.location);
+    formdata.append("area", data.area);
+    formdata.append("rooms", data.rooms);
+    formdata.append("price", data.price);
+    formdata.append("image", data.image);
+    formdata.append("image2", data.image2);
+    formdata.append("image3", data.image3);
+    console.log(formdata);
     axios
-      .put("http://localhost:5000/property/update/" + id, data, {
+      .put("http://localhost:5000/property/update/" + id, formdata, {
         headers: {
           Authorization: "Bearer " + token,
+          "Content-Type": "multipart/form-data",
         },
       })
       .then((res) => {
