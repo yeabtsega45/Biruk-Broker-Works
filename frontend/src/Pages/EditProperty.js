@@ -20,23 +20,29 @@ function EditProperty() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/property/get/" + id)
-      .then((res) => {
-        setData({
-          ...data,
-          type: res.data[0].type,
-          location: res.data[0].location,
-          area: res.data[0].area,
-          rooms: res.data[0].rooms,
-          price: res.data[0].price,
-          image: res.data[0].image,
-          image2: res.data[0].image2,
-          image3: res.data[0].image3,
-        });
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    if (id) {
+      axios
+        .get("http://localhost:5000/property/get/" + id)
+        .then((res) => {
+          console.log(id);
+          setData({
+            ...data,
+            type: res.data[0].type,
+            location: res.data[0].location,
+            area: res.data[0].area,
+            rooms: res.data[0].rooms,
+            price: res.data[0].price,
+            image: res.data[0].image,
+            image2: res.data[0].image2,
+            image3: res.data[0].image3,
+          });
+          console.log(res.data);
+        })
+        .catch((err) => console.log(err));
+    } else {
+      console.log("Property ID is undefined");
+    }
+  }, [id]);
 
   const handleSubmit = (event) => {
     event.preventDefault();

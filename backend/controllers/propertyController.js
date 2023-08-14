@@ -35,7 +35,21 @@ propertyController.get("/get/:id", async (req, res) => {
   }
 });
 
-// create property
+// propertyController.post("/create", verifyToken, async (req, res) => {
+//   // console.log("data is coming", req.body);
+//   try {
+//     const newProperty = await Property.create({
+//       ...req.body,
+//       currentOwner: req.user.id,
+//     });
+
+//     return res.status(201).json(newProperty);
+//   } catch (error) {
+//     return res.status(500).json(error);
+//   }
+// });
+
+// image upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "public/images");
@@ -49,6 +63,7 @@ const upload = multer({
   storage: storage,
 });
 
+// create property
 propertyController.post(
   "/create",
   verifyToken,
@@ -80,41 +95,79 @@ propertyController.post(
   }
 );
 
-// propertyController.post("/create", verifyToken, async (req, res) => {
-//   // console.log("data is coming", req.body);
-//   try {
-//     const newProperty = await Property.create({
-//       ...req.body,
-//       currentOwner: req.user.id,
-//     });
+// update property
+propertyController.put(
+  "/update/:id",
+  verifyToken,
+  upload.fields([
+    { name: "image", maxCount: 1 },
+    { name: "image2", maxCount: 1 },
+    { name: "image3", maxCount: 1 },
+  ]),
+  async (req, res) => {
+    try {
+      const property = await Property.findById(req.params.id);
+      if (property.currentOwner.toString() !== req.user.id) {
+        throw new Error(
+          "You are not allowed to update other people's properties"
+        );
+      }
 
-//     return res.status(201).json(newProperty);
+      const updatedData = {
+        type: req.body.type,
+        location: req.body.location,
+        area: req.body.area,
+        rooms: req.body.rooms,
+        price: req.body.price,
+        currentOwner: req.user.id,
+      };
+
+      if (req.files["image"]) {
+        updatedData.image = req.files["image"][0].filename;
+      }
+
+      if (req.files["image2"]) {
+        updatedData.image2 = req.files["image2"][0].filename;
+      }
+
+      if (req.files["image3"]) {
+        updatedData.image3 = req.files["image3"][0].filename;
+      }
+
+      const updatedProperty = await Property.findByIdAndUpdate(
+        req.params.id,
+        { $set: updatedData },
+        { new: true }
+      );
+
+      return res.status(200).json(updatedProperty);
+    } catch (error) {
+      return res.status(500).json(error);
+    }
+  }
+);
+
+// // update property
+// propertyController.put("/update/:id", verifyToken, async (req, res) => {
+//   try {
+//     const property = await Property.findById(req.params.id);
+//     if (property.currentOwner.toString() !== req.user.id) {
+//       throw new Error(
+//         "You are not allowed to update other people's properties"
+//       );
+//     }
+
+//     const updatedProperty = await Property.findByIdAndUpdate(
+//       req.params.id,
+//       { $set: req.body },
+//       { new: true }
+//     );
+
+//     return res.status(200).json(updatedProperty);
 //   } catch (error) {
 //     return res.status(500).json(error);
 //   }
 // });
-
-// update property
-propertyController.put("/update/:id", verifyToken, async (req, res) => {
-  try {
-    const property = await Property.findById(req.params.id);
-    if (property.currentOwner.toString() !== req.user.id) {
-      throw new Error(
-        "You are not allowed to update other people's properties"
-      );
-    }
-
-    const updatedProperty = await Property.findByIdAndUpdate(
-      req.params.id,
-      { $set: req.body },
-      { new: true }
-    );
-
-    return res.status(200).json(updatedProperty);
-  } catch (error) {
-    return res.status(500).json(error);
-  }
-});
 
 // delete property
 propertyController.delete("/delete/:id", verifyToken, async (req, res) => {

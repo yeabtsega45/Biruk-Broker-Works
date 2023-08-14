@@ -80,13 +80,13 @@ function Property(props) {
             {isLoggedIn ? (
               <div>
                 <Link
-                  to={`/edit/` + property.id}
+                  to={`/edit/` + property._id}
                   className="btn btn-primary btn-sm me-2"
                 >
                   edit
                 </Link>
                 <button
-                  onClick={() => handleDelete(property.id)}
+                  onClick={() => handleDelete(property._id)}
                   className="btn btn-sm btn-danger"
                 >
                   delete

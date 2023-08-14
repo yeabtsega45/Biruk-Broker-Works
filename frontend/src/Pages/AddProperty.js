@@ -63,7 +63,6 @@ function AddProperty() {
             autoComplete="off"
             onChange={(e) => {
               setData({ ...data, type: e.target.value });
-              console.log(data);
             }}
           />
         </div>
