@@ -1,74 +1,57 @@
-import React from "react";
-// import { NavLink } from "react-router-dom";
-// import { useState } from "react";
-import "./Navbar.css";
-// import logo from "../Assets/logo3.png";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import CloseIcon from "@material-ui/icons/Close";
+import React, { useState, useEffect } from "react";
+import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
 
 function Navbar() {
-  // const [show, setShow] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const nav = document.querySelector("#navbarNav");
+    nav.classList.toggle("show", isOpen);
+  }, [isOpen]);
+
+  const toggleNav = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          Navbar
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top z-index-99">
+      <div className="container-fluid">
+        <a className="navbar-brand d-flex align-items-center" href="/">
+          <EmojiTransportationIcon style={{ fontSize: "40px" }} />{" "}
+          <strong>Biruk Broker Works</strong>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" onClick={toggleNav}>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">
-                Home
+        <div
+          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+          id="navbarNav"
+        >
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/">
+                <strong>Houses</strong>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/cars">
-                Features
+            <li className="nav-item">
+              <a className="nav-link" href="/cars">
+                <strong>Cars</strong>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/lands">
-                Pricing
+            <li className="nav-item">
+              <a className="nav-link" href="/lands">
+                <strong>Lands</strong>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/rentalhouses">
-                Pricing
+            <li className="nav-item">
+              <a className="nav-link" href="/rentalhouses">
+                <strong>Rental_Houses</strong>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    // <div className="header">
-    //   <div className="logo">
-    //     <img src={logo} alt="logo" />
-    //   </div>
-    //   <nav
-    //     className={show ? "nav-links-computer" : "nav-links-mobile"}
-    //     onClick={() => setShow(true)}
-    //   >
-    //     <NavLink to="/">Houses</NavLink>
-    //     <NavLink to="/cars">Cars</NavLink>
-    //     <NavLink to="/lands">Lands</NavLink>
-    //     <NavLink to="/rentalhouses">Rental_Houses</NavLink>
-    //   </nav>
-    //   <button className="mobile-menu-icon" onClick={() => setShow(!show)}>
-    //     {show ? <MenuIcon /> : <CloseIcon />}
-    //   </button>
-    // </div>
   );
 }
 
