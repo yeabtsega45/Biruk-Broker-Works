@@ -3,6 +3,9 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Houses from "./Pages/Houses";
+import Cars from "./Pages/Cars";
+import Lands from "./Pages/Lands";
+import RentalHouses from "./Pages/RentalHouses";
 import Footer from "./Components/Footer";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
@@ -19,6 +22,36 @@ function App() {
             <>
               <Navbar />
               <Houses />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/cars"
+          element={
+            <>
+              <Navbar />
+              <Cars />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/lands"
+          element={
+            <>
+              <Navbar />
+              <Lands />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/rentalhouses"
+          element={
+            <>
+              <Navbar />
+              <RentalHouses />
               <Footer />
             </>
           }

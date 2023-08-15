@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../Components/HeroImage";
 
-function RentalLands() {
+function RentalHouses() {
   return (
     <>
       <HeroImage title="Rental houses" />
@@ -9,4 +9,4 @@ function RentalLands() {
   );
 }
 
-export default RentalLands;
+export default RentalHouses;
