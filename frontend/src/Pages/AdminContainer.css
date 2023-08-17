@@ -1,13 +1,8 @@
 .properties {
     display: flex;
-    width:90%;
+    width:100%;
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
     margin: auto;
 }
-/* .slidercontainer {
-    width: 500px;
-    height: 280px;
-    margin: 0 auto;
-} */

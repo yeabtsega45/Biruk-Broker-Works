@@ -1,5 +1,5 @@
 import React from "react";
-import "./Houses.css";
+import "./PageContainer.css";
 import Property from "../Components/Property";
 import HeroImage from "../Components/HeroImage";
 

@@ -11,6 +11,8 @@ import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
 import AddProperty from "./Pages/AddProperty";
 import EditProperty from "./Pages/EditProperty";
+import AdminHouses from "./Pages/AdminHouses";
+import AdminCars from "./Pages/AdminCars";
 
 function App() {
   return (
@@ -57,9 +59,13 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/add" element={<AddProperty />} />
-        <Route path="/edit/:id" element={<EditProperty />} />
+        <Route path="/admin" element={<Admin />}>
+          <Route path="" element={<AdminHouses />}></Route>
+          <Route path="/admin/cars" element={<AdminCars />}></Route>
+          {/* <Route path="/lands" element={<AdminLands />}></Route> */}
+          <Route path="/admin/add" element={<AddProperty />}></Route>
+          <Route path="/admin/edit/:id" element={<EditProperty />}></Route>
+        </Route>
       </Routes>
     </>
   );

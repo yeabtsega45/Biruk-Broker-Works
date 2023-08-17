@@ -26,11 +26,13 @@ function Property(props) {
 
   // check if user is logged in, to display edit & delete buttons
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
+    console.log("Token from localStorage:", localStorage.getItem("token"));
+    console.log("Token:", token);
+    if (token && token !== "") {
       setIsLoggedIn(true);
     }
-  }, []);
+    console.log("isLoggedIn:", isLoggedIn);
+  }, [token]);
 
   // delete property
   const handleDelete = (id) => {
