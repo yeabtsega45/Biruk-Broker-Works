@@ -41,7 +41,7 @@ function AddProperty() {
         },
       })
       .then((res) => {
-        navigate("/");
+        navigate("/admin");
         console.log(res);
       })
       .catch((err) => console.log(err));

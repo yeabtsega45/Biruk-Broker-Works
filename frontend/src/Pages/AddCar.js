@@ -33,7 +33,7 @@ function AddCar() {
     axios
       .request({
         method: "POST",
-        url: "http://localhost:5000/property/create",
+        url: "http://localhost:5000/car/create",
         data: formdata,
         headers: {
           Authorization: "Bearer " + token,
@@ -41,7 +41,7 @@ function AddCar() {
         },
       })
       .then((res) => {
-        navigate("/");
+        navigate("/admin/cars");
         console.log(res);
       })
       .catch((err) => console.log(err));

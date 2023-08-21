@@ -22,7 +22,7 @@ function EditCar() {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:5000/property/get/" + id)
+        .get("http://localhost:5000/car/get/" + id)
         .then((res) => {
           console.log(id);
           setData({
@@ -58,7 +58,7 @@ function EditCar() {
     formdata.append("image3", data.image3);
     console.log(formdata);
     axios
-      .put("http://localhost:5000/property/update/" + id, formdata, {
+      .put("http://localhost:5000/car/update/" + id, formdata, {
         headers: {
           Authorization: "Bearer " + token,
           "Content-Type": "multipart/form-data",
@@ -66,7 +66,7 @@ function EditCar() {
       })
       .then((res) => {
         if (res.status === 200) {
-          navigate("/");
+          navigate("/admin/cars");
         }
       })
       .catch((err) => console.log(err));

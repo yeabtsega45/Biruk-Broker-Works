@@ -66,7 +66,7 @@ function EditProperty() {
       })
       .then((res) => {
         if (res.status === 200) {
-          navigate("/");
+          navigate("/admin");
         }
       })
       .catch((err) => console.log(err));

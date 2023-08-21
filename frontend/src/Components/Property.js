@@ -82,7 +82,7 @@ function Property() {
             {isLoggedIn ? (
               <div>
                 <Link
-                  to={`/edit/` + property._id}
+                  to={`/admin/edit/` + property._id}
                   className="btn btn-primary btn-sm me-2"
                 >
                   edit

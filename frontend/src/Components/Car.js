@@ -82,7 +82,7 @@ function Car() {
             {isLoggedIn ? (
               <div>
                 <Link
-                  to={`/edit/` + car._id}
+                  to={`/admin/edit/` + car._id}
                   className="btn btn-primary btn-sm me-2"
                 >
                   edit
