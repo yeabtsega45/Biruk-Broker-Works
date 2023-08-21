@@ -9,7 +9,7 @@ carController.get("/getall", async (req, res) => {
   try {
     const cars = await Car.find({});
 
-    console.log(cars);
+    // console.log(cars);
 
     return res.status(200).json(cars);
   } catch (error) {
@@ -63,11 +63,11 @@ carController.post(
       // console.log(req.body);
       // console.log(req.files);
       const newCar = await Car.create({
-        type: req.body.name,
-        location: req.body.model,
-        area: req.body.price,
-        rooms: req.body.transmission,
-        price: req.body.usage,
+        name: req.body.name,
+        model: req.body.model,
+        price: req.body.price,
+        transmission: req.body.transmission,
+        usage: req.body.usage,
         image: req.files["image"] ? req.files["image"][0].filename : null, // Access filename of 'image'
         image2: req.files["image2"] ? req.files["image2"][0].filename : null, // Access filename of 'image2'
         image3: req.files["image3"] ? req.files["image3"][0].filename : null, // Access filename of 'image3'
@@ -98,11 +98,11 @@ carController.put(
       }
 
       const updatedData = {
-        type: req.body.name,
-        location: req.body.model,
-        area: req.body.price,
-        rooms: req.body.transmission,
-        price: req.body.usage,
+        name: req.body.name,
+        model: req.body.model,
+        price: req.body.price,
+        transmission: req.body.transmission,
+        usage: req.body.usage,
         currentOwner: req.user.id,
       };
 

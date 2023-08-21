@@ -29,7 +29,7 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a className="nav-link" aria-current="page" href="/">
                 <strong>Houses</strong>
               </a>
             </li>

@@ -48,7 +48,7 @@ function AddCar() {
   };
   return (
     <div className="d-flex flex-column align-items-center pt-4">
-      <h2>Add Property</h2>
+      <h2>Add Car</h2>
       <form className="row g-3 w-50" onSubmit={handleSubmit}>
         <div className="col-12">
           <label htmlFor="inputName" className="form-label">
@@ -90,6 +90,7 @@ function AddCar() {
             name="usage"
             id="inputUsage"
             placeholder="new/used"
+            autoComplete="off"
             onChange={(e) => setData({ ...data, usage: e.target.value })}
           />
         </div>

@@ -1,9 +1,11 @@
 import React from "react";
+import "./PageContainer.css";
+import Car from "../Components/Car";
 
 function AdminCars() {
   return (
-    <div>
-      <div>AdminCars</div>
+    <div className="properties">
+      <Car />
     </div>
   );
 }

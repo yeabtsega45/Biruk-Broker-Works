@@ -73,7 +73,7 @@ function EditCar() {
   };
   return (
     <div className="d-flex flex-column align-items-center pt-4">
-      <h2>Update Property</h2>
+      <h2>Update Car</h2>
       <form className="row g-3 w-50" onSubmit={handleSubmit}>
         <div className="col-12">
           <label htmlFor="inputName" className="form-label">

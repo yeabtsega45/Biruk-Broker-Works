@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -6,6 +6,7 @@ function Admin() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   const token = localStorage.getItem("token");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     axios
@@ -16,7 +17,7 @@ function Admin() {
       })
       .then((res) => {
         if (res.data.Status === "Success") {
-          navigate("/admin");
+          setIsLoggedIn(true);
           console.log(res.data);
         }
       })
@@ -30,6 +31,10 @@ function Admin() {
     localStorage.removeItem("token");
     navigate("/");
   };
+
+  if (!isLoggedIn) {
+    return null; // Render nothing if user is not an admin
+  }
 
   return (
     <div className="container-fluid">
@@ -87,7 +92,7 @@ function Admin() {
         </div>
         <div className="col p-0 m-0">
           <div className="p-2 d-flex justify-content-center shadow">
-            <h4>Property Management System</h4>
+            <h4>Admin Page</h4>
           </div>
           <Outlet />
         </div>

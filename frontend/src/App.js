@@ -67,7 +67,7 @@ function App() {
           <Route path="/admin/edit/:id" element={<EditProperty />}></Route>
           <Route path="/admin/cars" element={<AdminCars />}></Route>
           <Route path="/admin/cars/add" element={<AddCar />}></Route>
-          <Route path="/admin/car/edit/:id" element={<EditCar />}></Route>
+          <Route path="/admin/cars/edit/:id" element={<EditCar />}></Route>
           {/* <Route path="/lands" element={<AdminLands />}></Route> */}
         </Route>
       </Routes>
