@@ -13,9 +13,8 @@ function Footer() {
     <div className="footer">
       <div className="footer_logo">
         <img src={logo} alt="logo" />
-        {/* <h2>BIRUK BROKER WORKS</h2> */}
       </div>
-      <div className="footer-container">
+      <div>
         <div>
           <div className="info">
             <PersonIcon />

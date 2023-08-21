@@ -53,7 +53,7 @@ function Property() {
   };
 
   return (
-    <div>
+    <div className="properties">
       {data.map((property, index) => {
         return (
           <div key={index} className="property">

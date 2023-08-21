@@ -59,7 +59,7 @@ function AddProperty() {
             className="form-control"
             name="type"
             id="inputType"
-            placeholder="Enter Type"
+            placeholder="villa / apartment / G+1 / G+2"
             autoComplete="off"
             onChange={(e) => {
               setData({ ...data, type: e.target.value });
@@ -89,7 +89,8 @@ function AddProperty() {
             className="form-control"
             name="rooms"
             id="inputRooms"
-            placeholder="Enter Rooms"
+            placeholder="beds:, bath:"
+            autoComplete="off"
             onChange={(e) => setData({ ...data, rooms: e.target.value })}
           />
         </div>
@@ -102,7 +103,7 @@ function AddProperty() {
             className="form-control"
             name="price"
             id="inputPrice"
-            placeholder="Enter Salary"
+            placeholder="Enter Price"
             autoComplete="off"
             onChange={(e) => setData({ ...data, price: e.target.value })}
           />
@@ -116,7 +117,7 @@ function AddProperty() {
             className="form-control"
             name="area"
             id="inputArea"
-            placeholder="1234 Main St"
+            placeholder="square meter"
             autoComplete="off"
             onChange={(e) => setData({ ...data, area: e.target.value })}
           />

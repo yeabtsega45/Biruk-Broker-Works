@@ -5,9 +5,6 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    /* justify-content: space-evenly; */
-    /* margin: auto; */
-    /* width: 100vh; */
 }
 .footer_logo {
     display: flex;
@@ -25,16 +22,12 @@
     object-fit: cover;
     margin: 0px 10px;
 }
-/* .footer-container {
-    justify-content: space-evenly;
-    margin: auto;
-    height: auto;
-    height: 100%;
-} */
 .info {
     display: flex;
     align-items: center;
-    /* margin: -10px 0px; */
+    /* justify-content: center;
+    text-align: center;
+    margin: 0 auto; */
 }
 .info > a {
     color: white;
@@ -44,17 +37,11 @@
     color: rgb(86, 86, 252);
     transition: 0.3s;
 }
-/* .footer-icons {
-    justify-content: center;
-    margin: auto;
-} */
 .icon {
     margin: 10px 15px;
-    /* background-color: #005ea2; */
     transform: scale(1.5);
     color: whitesmoke;
     padding: 0;
-    /* margin: auto; */
 }
 .icon:hover {
     color: rgb(86, 86, 252);

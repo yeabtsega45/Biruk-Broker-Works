@@ -53,7 +53,7 @@ function Car() {
   };
 
   return (
-    <div>
+    <div className="properties">
       {data.map((car, index) => {
         return (
           <div key={index} className="property">
