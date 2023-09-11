@@ -22,7 +22,7 @@ function EditProperty() {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:5000/property/get/" + id)
+        .get("/property/get/" + id)
         .then((res) => {
           console.log(id);
           setData({
@@ -58,7 +58,7 @@ function EditProperty() {
     formdata.append("image3", data.image3);
     console.log(formdata);
     axios
-      .put("http://localhost:5000/property/update/" + id, formdata, {
+      .put("/property/update/" + id, formdata, {
         headers: {
           Authorization: "Bearer " + token,
           "Content-Type": "multipart/form-data",

@@ -33,7 +33,7 @@ function AddProperty() {
     axios
       .request({
         method: "POST",
-        url: "http://localhost:5000/property/create",
+        url: "/property/create",
         data: formdata,
         headers: {
           Authorization: "Bearer " + token,

@@ -13,7 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    // origin: ["http://localhost:3000"],
+    origin: ["https://biruk-broker-works.netlify.app"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })

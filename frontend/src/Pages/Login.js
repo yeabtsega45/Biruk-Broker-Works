@@ -15,7 +15,7 @@ function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/auth/login", values)
+      .post("/auth/login", values)
       .then((res) => {
         if (res.status === 200) {
           localStorage.setItem("token", res.data.token);

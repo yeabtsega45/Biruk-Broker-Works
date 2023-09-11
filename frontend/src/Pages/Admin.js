@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import axios from "axios";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Admin() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   const token = localStorage.getItem("token");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/auth/admin", {
+      .get("/auth/admin", {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -39,8 +42,13 @@ function Admin() {
   return (
     <div className="container-fluid">
       <div className="row flex-nowrap">
-        <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-          <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 fixed-top">
+        <div
+          className={`col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark ${
+            sidebarOpen ? "" : "collapse"
+          }`}
+          onClick={() => setSidebarOpen(true)}
+        >
+          <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 sticky-top">
             <a
               href="/admin"
               className="d-flex align-items-center pb-3 mb-md-1 mt-md-3 me-md-auto text-white text-decoration-none"
@@ -49,16 +57,21 @@ function Admin() {
                 Admin Dashboard
               </span>
             </a>
+            <button
+              className="d-md-none btn btn-dark d-inline-block"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#menu"
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+            >
+              {sidebarOpen ? <MenuIcon /> : <CloseIcon />}
+            </button>
             <ul
               className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
               id="menu"
             >
               <li>
-                <Link
-                  to=""
-                  data-bs-toggle="collapse"
-                  className="nav-link text-white px-0 align-middle"
-                >
+                <Link to="" className="nav-link text-white px-0 align-middle">
                   <i className="fs-4 bi-speedometer2"></i>{" "}
                   <span className="ms-1 d-none d-sm-inline">Houses</span>{" "}
                 </Link>

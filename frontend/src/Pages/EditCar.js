@@ -22,7 +22,7 @@ function EditCar() {
   useEffect(() => {
     if (id) {
       axios
-        .get("http://localhost:5000/car/get/" + id)
+        .get("/car/get/" + id)
         .then((res) => {
           console.log(id);
           setData({
@@ -58,7 +58,7 @@ function EditCar() {
     formdata.append("image3", data.image3);
     console.log(formdata);
     axios
-      .put("http://localhost:5000/car/update/" + id, formdata, {
+      .put("/car/update/" + id, formdata, {
         headers: {
           Authorization: "Bearer " + token,
           "Content-Type": "multipart/form-data",

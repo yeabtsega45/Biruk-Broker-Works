@@ -33,7 +33,7 @@ function AddCar() {
     axios
       .request({
         method: "POST",
-        url: "http://localhost:5000/car/create",
+        url: "/car/create",
         data: formdata,
         headers: {
           Authorization: "Bearer " + token,

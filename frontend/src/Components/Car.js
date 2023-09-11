@@ -13,7 +13,7 @@ function Car() {
   //get all cars
   useEffect(() => {
     axios
-      .get("http://localhost:5000/car/getall")
+      .get("/car/getall")
       .then((res) => {
         if (res.status === 200) {
           setData(res.data);
@@ -37,7 +37,7 @@ function Car() {
   // delete car
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:5000/car/delete/" + id, {
+      .delete("/car/delete/" + id, {
         headers: {
           Authorization: "Bearer " + token,
         },

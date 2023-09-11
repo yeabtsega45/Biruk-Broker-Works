@@ -13,7 +13,7 @@ function Property() {
   //get all properties
   useEffect(() => {
     axios
-      .get("http://localhost:5000/property/getall")
+      .get("/property/getall")
       .then((res) => {
         if (res.status === 200) {
           setData(res.data);
@@ -37,7 +37,7 @@ function Property() {
   // delete property
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:5000/property/delete/" + id, {
+      .delete("/property/delete/" + id, {
         headers: {
           Authorization: "Bearer " + token,
         },

@@ -4,7 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import axios from "axios";
 
+// axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "https://biruk-broker-works-api.onrender.com";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
