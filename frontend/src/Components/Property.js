@@ -31,7 +31,7 @@ function Property() {
     if (token && token !== "") {
       setIsLoggedIn(true);
     }
-    console.log("isLoggedIn:", isLoggedIn);
+    // console.log("isLoggedIn:", isLoggedIn);
   }, [token]);
 
   // delete property

@@ -42,6 +42,7 @@ function EditProperty() {
     } else {
       console.log("Property ID is undefined");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const handleSubmit = (event) => {
