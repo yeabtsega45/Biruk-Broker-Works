@@ -59,17 +59,26 @@ function Car() {
           <div key={index} className="property">
             <Carousel className="carousel">
               <img
-                src={`http://localhost:5000/images/` + car.image}
+                src={
+                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  car.image
+                }
                 className="images"
                 alt="no_image"
               />
               <img
-                src={`http://localhost:5000/images/` + car.image2}
+                src={
+                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  car.image2
+                }
                 className="images"
                 alt="no_image"
               />
               <img
-                src={`http://localhost:5000/images/` + car.image3}
+                src={
+                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  car.image3
+                }
                 className="images"
                 alt="no_image"
               />
