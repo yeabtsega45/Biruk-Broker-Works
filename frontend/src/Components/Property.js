@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+// import "./Card.css";
 
 function Property() {
   const [data, setData] = useState([]);
@@ -17,6 +18,7 @@ function Property() {
       .then((res) => {
         if (res.status === 200) {
           setData(res.data);
+          console.log(res.data);
         } else {
           alert("Error");
         }
@@ -60,52 +62,57 @@ function Property() {
             <Carousel className="carousel">
               <img
                 src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  `http://localhost:5000/images/` +
+                  // `https://biruk-broker-works-api.onrender.com/images/` +
                   property.image
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
               <img
                 src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  `http://localhost:5000/images/` +
+                  // `https://biruk-broker-works-api.onrender.com/images/` +
                   property.image2
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
               <img
                 src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
+                  `http://localhost:5000/images/` +
+                  // `https://biruk-broker-works-api.onrender.com/images/` +
                   property.image3
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
             </Carousel>
-            <p className="large">{property.type}</p>
-            <p className="small">{property.location}</p>
-            <p className="small">{property.area}</p>
-            <p className="small">{property.rooms}</p>
-            <p className="large">{property.price}</p>
-            {isLoggedIn ? (
-              <div>
-                <Link
-                  to={`/admin/edit/` + property._id}
-                  className="btn btn-primary btn-sm me-2"
-                >
-                  edit
-                </Link>
-                <button
-                  onClick={() => handleDelete(property._id)}
-                  className="btn btn-sm btn-danger"
-                >
-                  delete
-                </button>
-              </div>
-            ) : (
-              <div></div>
-            )}
+            <div className="card-content">
+              <p className="large">{property.type}</p>
+              <p className="small">{property.location}</p>
+              <p className="small">{property.area}</p>
+              <p className="small">{property.rooms}</p>
+              <p className="large">{property.price}</p>
+              {isLoggedIn ? (
+                <div>
+                  <Link
+                    to={`/admin/edit/` + property._id}
+                    className="btn btn-primary btn-sm me-2"
+                  >
+                    edit
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(property._id)}
+                    className="btn btn-sm btn-danger"
+                  >
+                    delete
+                  </button>
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
         );
       })}

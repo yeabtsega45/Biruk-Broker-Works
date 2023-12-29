@@ -1,0 +1,84 @@
+.properties {
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    background-color: #efefef;
+}
+
+/* Card container */
+.property {
+    border-radius: 25px;
+    background-color: #fff;
+    width: 320px;
+}
+
+.carousel {
+    position: relative;
+    max-height: 350px;
+    /* width: 150px; */
+    padding: 3px;
+}
+  
+/* Card image */
+.images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border: 4px solid #4070f4; */
+    border-radius: 25px;
+}
+  
+/* Card content */
+.property-content {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 0px 18px;
+    /* width: 95%; */
+    /* margin: 0 auto; */
+}
+  
+/* Card title */
+.large {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    /* text-align: center; */
+    /* padding: 0px 18px; */
+  }
+  
+/* Card text */
+.small {
+    color: #707070;
+    font-size: 18px;
+    /* text-align: center; */
+    /* padding: 0px 18px; */
+}
+
+hr {
+    /* padding: 0px 18px; */
+    width: 100%;
+    border: 1px solid;
+    /* margin: 0; */
+    /* padding: 0; */
+}
+  
+/* Card button */
+.property-button {
+    border: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 14px;
+    cursor: pointer;
+}
+  
+.property-button:hover {
+    background-color: #0056b3;
+}

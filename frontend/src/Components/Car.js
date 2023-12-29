@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Property.css";
+// import "./Property.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Card.css";
 
 function Car() {
   const [data, setData] = useState([]);
@@ -57,14 +58,14 @@ function Car() {
       {data.map((car, index) => {
         return (
           <div key={index} className="property">
-            <Carousel className="carousel">
+            <Carousel showThumbs={false} className="carousel">
               <img
                 src={
                   `https://biruk-broker-works-api.onrender.com/images/` +
                   car.image
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
               <img
                 src={
@@ -72,7 +73,7 @@ function Car() {
                   car.image2
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
               <img
                 src={
@@ -80,32 +81,36 @@ function Car() {
                   car.image3
                 }
                 className="images"
-                alt="no_image"
+                alt=""
               />
             </Carousel>
-            <p className="large">{car.name}</p>
-            <p className="small">{car.model}</p>
-            <p className="small">{car.transmission}</p>
-            <p className="small">{car.usage}</p>
-            <p className="large">{car.price}</p>
-            {isLoggedIn ? (
-              <div>
-                <Link
-                  to={`/admin/cars/edit/` + car._id}
-                  className="btn btn-primary btn-sm me-2"
-                >
-                  edit
-                </Link>
-                <button
-                  onClick={() => handleDelete(car._id)}
-                  className="btn btn-sm btn-danger"
-                >
-                  delete
-                </button>
-              </div>
-            ) : (
-              <div></div>
-            )}
+            <div className="property-content">
+              <p className="large">{car.name}</p>
+              <hr />
+              <p className="small">{car.model}</p>
+              <p className="small">{car.transmission}</p>
+              <p className="small">{car.usage}</p>
+              <hr />
+              <p className="large">{car.price}</p>
+              {isLoggedIn ? (
+                <div>
+                  <Link
+                    to={`/admin/cars/edit/` + car._id}
+                    className="btn btn-primary btn-sm me-2"
+                  >
+                    edit
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(car._id)}
+                    className="btn btn-sm btn-danger"
+                  >
+                    delete
+                  </button>
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
           </div>
         );
       })}
