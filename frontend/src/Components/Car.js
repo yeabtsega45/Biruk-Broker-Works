@@ -9,15 +9,18 @@ import "./Card.css";
 function Car() {
   const [data, setData] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(false);
   const token = localStorage.getItem("token");
 
   //get all cars
   useEffect(() => {
+    setLoading(true);
     axios
       .get("/car/getall")
       .then((res) => {
         if (res.status === 200) {
           setData(res.data);
+          setLoading(false);
         } else {
           alert("Error");
         }
@@ -55,65 +58,71 @@ function Car() {
 
   return (
     <div className="properties">
-      {data.map((car, index) => {
-        return (
-          <div key={index} className="property">
-            <Carousel showThumbs={false} className="carousel">
-              <img
-                src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
-                  car.image
-                }
-                className="images"
-                alt=""
-              />
-              <img
-                src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
-                  car.image2
-                }
-                className="images"
-                alt=""
-              />
-              <img
-                src={
-                  `https://biruk-broker-works-api.onrender.com/images/` +
-                  car.image3
-                }
-                className="images"
-                alt=""
-              />
-            </Carousel>
-            <div className="property-content">
-              <p className="large">{car.name}</p>
-              {/* <hr /> */}
-              <p className="small">{car.model}</p>
-              <p className="small">{car.transmission}</p>
-              <p className="small">{car.usage}</p>
-              {/* <hr /> */}
-              <p className="price">{car.price}</p>
-              {isLoggedIn ? (
-                <div>
-                  <Link
-                    to={`/admin/cars/edit/` + car._id}
-                    className="btn btn-primary btn-sm me-2"
-                  >
-                    edit
-                  </Link>
-                  <button
-                    onClick={() => handleDelete(car._id)}
-                    className="btn btn-sm btn-danger"
-                  >
-                    delete
-                  </button>
-                </div>
-              ) : (
-                <div></div>
-              )}
+      {loading ? (
+        <p>Loading...</p>
+      ) : data.length === 0 ? (
+        <p>No properties found.</p>
+      ) : (
+        data.map((car, index) => {
+          return (
+            <div key={index} className="property">
+              <Carousel showThumbs={false} className="carousel">
+                <img
+                  src={
+                    `https://biruk-broker-works-api.onrender.com/images/` +
+                    car.image
+                  }
+                  className="images"
+                  alt=""
+                />
+                <img
+                  src={
+                    `https://biruk-broker-works-api.onrender.com/images/` +
+                    car.image2
+                  }
+                  className="images"
+                  alt=""
+                />
+                <img
+                  src={
+                    `https://biruk-broker-works-api.onrender.com/images/` +
+                    car.image3
+                  }
+                  className="images"
+                  alt=""
+                />
+              </Carousel>
+              <div className="property-content">
+                <p className="large">{car.name}</p>
+                {/* <hr /> */}
+                <p className="small">{car.model}</p>
+                <p className="small">{car.transmission}</p>
+                <p className="small">{car.usage}</p>
+                {/* <hr /> */}
+                <p className="price">{car.price}</p>
+                {isLoggedIn ? (
+                  <div>
+                    <Link
+                      to={`/admin/cars/edit/` + car._id}
+                      className="btn btn-primary btn-sm me-2"
+                    >
+                      edit
+                    </Link>
+                    <button
+                      onClick={() => handleDelete(car._id)}
+                      className="btn btn-sm btn-danger"
+                    >
+                      delete
+                    </button>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })
+      )}
     </div>
   );
 }
