@@ -86,12 +86,12 @@ function Car() {
             </Carousel>
             <div className="property-content">
               <p className="large">{car.name}</p>
-              <hr />
+              {/* <hr /> */}
               <p className="small">{car.model}</p>
               <p className="small">{car.transmission}</p>
               <p className="small">{car.usage}</p>
-              <hr />
-              <p className="large">{car.price}</p>
+              {/* <hr /> */}
+              <p className="price">{car.price}</p>
               {isLoggedIn ? (
                 <div>
                   <Link

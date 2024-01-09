@@ -13,11 +13,14 @@
     border-radius: 25px;
     background-color: #fff;
     width: 320px;
+    margin: 10px 20px;
+    border: 3px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
 }
 
 .carousel {
     position: relative;
-    max-height: 350px;
+    /* max-height: 350px; */
     /* width: 150px; */
     padding: 3px;
 }
@@ -25,7 +28,7 @@
 /* Card image */
 .images {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
     /* border: 4px solid #4070f4; */
     border-radius: 25px;
@@ -48,7 +51,8 @@
     color: #333;
     /* text-align: center; */
     /* padding: 0px 18px; */
-  }
+    border-bottom: 3px solid gainsboro;
+}
   
 /* Card text */
 .small {
@@ -57,8 +61,16 @@
     /* text-align: center; */
     /* padding: 0px 18px; */
 }
-
-hr {
+.price {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    /* text-align: center; */
+    /* padding: 0px 18px; */
+    border-top: 3px solid gainsboro;
+    /* border-bottom: 3px solid gainsboro; */
+}
+.property-content > hr {
     /* padding: 0px 18px; */
     width: 100%;
     border: 1px solid;

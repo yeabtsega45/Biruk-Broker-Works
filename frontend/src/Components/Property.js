@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./Property.css";
+// import "./Property.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-// import "./Card.css";
+import "./Card.css";
 
 function Property() {
   const [data, setData] = useState([]);
@@ -59,7 +59,7 @@ function Property() {
       {data.map((property, index) => {
         return (
           <div key={index} className="property">
-            <Carousel className="carousel">
+            <Carousel showThumbs={false} className="carousel">
               <img
                 src={
                   `http://localhost:5000/images/` +
@@ -88,12 +88,12 @@ function Property() {
                 alt=""
               />
             </Carousel>
-            <div className="card-content">
+            <div className="property-content">
               <p className="large">{property.type}</p>
               <p className="small">{property.location}</p>
               <p className="small">{property.area}</p>
               <p className="small">{property.rooms}</p>
-              <p className="large">{property.price}</p>
+              <p className="price">{property.price}</p>
               {isLoggedIn ? (
                 <div>
                   <Link
