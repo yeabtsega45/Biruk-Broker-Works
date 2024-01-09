@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Card.css";
+import BeatLoader from "react-spinners/BeatLoader";
 
 function Car() {
   const [data, setData] = useState([]);
@@ -59,7 +60,13 @@ function Car() {
   return (
     <div className="properties">
       {loading ? (
-        <p>Loading...</p>
+        <BeatLoader
+          color={"#707070"}
+          loading={loading}
+          size={15}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
       ) : data.length === 0 ? (
         <p>No properties found.</p>
       ) : (
