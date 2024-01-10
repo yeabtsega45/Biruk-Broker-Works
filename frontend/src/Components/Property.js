@@ -77,8 +77,8 @@ function Property() {
               <Carousel showThumbs={false} className="carousel">
                 <img
                   src={
-                    `http://localhost:5000/images/` +
-                    // `https://biruk-broker-works-api.onrender.com/images/` +
+                    // `http://localhost:5000/images/` +
+                    `https://biruk-broker-works-api.onrender.com/images/` +
                     property.image
                   }
                   className="images"
@@ -86,8 +86,8 @@ function Property() {
                 />
                 <img
                   src={
-                    `http://localhost:5000/images/` +
-                    // `https://biruk-broker-works-api.onrender.com/images/` +
+                    // `http://localhost:5000/images/` +
+                    `https://biruk-broker-works-api.onrender.com/images/` +
                     property.image2
                   }
                   className="images"
@@ -95,8 +95,8 @@ function Property() {
                 />
                 <img
                   src={
-                    `http://localhost:5000/images/` +
-                    // `https://biruk-broker-works-api.onrender.com/images/` +
+                    // `http://localhost:5000/images/` +
+                    `https://biruk-broker-works-api.onrender.com/images/` +
                     property.image3
                   }
                   className="images"

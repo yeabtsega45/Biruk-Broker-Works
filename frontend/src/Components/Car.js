@@ -76,6 +76,7 @@ function Car() {
               <Carousel showThumbs={false} className="carousel">
                 <img
                   src={
+                    // `http://localhost:5000/images/` +
                     `https://biruk-broker-works-api.onrender.com/images/` +
                     car.image
                   }
@@ -84,6 +85,7 @@ function Car() {
                 />
                 <img
                   src={
+                    // `http://localhost:5000/images/` +
                     `https://biruk-broker-works-api.onrender.com/images/` +
                     car.image2
                   }
@@ -92,6 +94,7 @@ function Car() {
                 />
                 <img
                   src={
+                    // `http://localhost:5000/images/` +
                     `https://biruk-broker-works-api.onrender.com/images/` +
                     car.image3
                   }
