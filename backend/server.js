@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
-    // origin: ["https://property-brokers.onrender.com"],
+    // origin: ["http://localhost:3000"],
+    origin: ["https://property-brokers.onrender.com"],
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
