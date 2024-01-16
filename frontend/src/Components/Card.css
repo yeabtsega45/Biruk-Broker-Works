@@ -23,6 +23,7 @@
     /* max-height: 350px; */
     /* width: 150px; */
     padding: 3px;
+    /* background-color: gainsboro; */
 }
   
 /* Card image */
@@ -32,7 +33,12 @@
     object-fit: cover;
     /* border: 4px solid #4070f4; */
     border-radius: 25px;
+    background-color: gainsboro;
 }
+
+/* .images::before {
+    content: "loading";
+} */
   
 /* Card content */
 .property-content {
