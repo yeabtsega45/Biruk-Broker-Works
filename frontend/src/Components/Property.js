@@ -64,19 +64,21 @@ function Property() {
   };
 
   if (error) {
-    return <h4>{error}</h4>;
+    return <p className="error">{error}</p>;
   }
 
   return (
     <div className="properties">
       {loading ? (
-        <BeatLoader
-          color={"#707070"}
-          loading={loading}
-          size={15}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
+        <div className="loading">
+          <BeatLoader
+            color={"#707070"}
+            loading={loading}
+            size={15}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
       ) : data.length === 0 ? (
         <p>No properties found.</p>
       ) : (

@@ -1,3 +1,15 @@
+.loading {
+    display: flex;
+    height: 25vh;
+    align-items: center;
+}
+
+.error {
+    display: flex;
+    height: 25vh;
+    align-items: center;
+}
+
 .properties {
     display: flex;
     width:100%;
