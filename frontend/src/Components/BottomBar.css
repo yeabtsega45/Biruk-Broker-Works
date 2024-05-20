@@ -27,6 +27,11 @@
     margin: 5px 0;
 }
 
+.info {
+    display: flex;
+    align-items: center;
+}
+
 .footer-section a {
     color: #bbb;
     text-decoration: none;

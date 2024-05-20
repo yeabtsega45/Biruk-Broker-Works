@@ -4,6 +4,8 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import TelegramIcon from "@material-ui/icons/Telegram";
 import PhoneIcon from "@material-ui/icons/Phone";
+import PersonIcon from "@material-ui/icons/Person";
+import LocationOnIcon from "@material-ui/icons/LocationOn";
 
 function BottomBar() {
   return (
@@ -12,6 +14,14 @@ function BottomBar() {
         <div className="footer-section">
           <h3>About Us</h3>
           <p>Learn more about our company and team.</p>
+          <div className="info">
+            <PersonIcon />
+            <p>Biruk Sisay</p>
+          </div>
+          <div className="info">
+            <LocationOnIcon />
+            <p>Addis Ababa, Yeka, Kotebe</p>
+          </div>
         </div>
         <div className="footer-section">
           <h3>Contact Us</h3>
