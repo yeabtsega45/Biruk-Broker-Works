@@ -1,7 +1,14 @@
 import React from "react";
+import Hero from "./components/Hero";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <Hero
+      image="https://example.com/your-image.jpg"
+      title="Welcome to Our Real Estate"
+      subtitle="Find your dream home today"
+    />
+  );
 }
 
 export default Home;
