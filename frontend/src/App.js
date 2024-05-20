@@ -6,7 +6,6 @@ import Houses from "./Pages/Houses";
 import Cars from "./Pages/Cars";
 import Lands from "./Pages/Lands";
 import RentalHouses from "./Pages/RentalHouses";
-import Footer from "./Components/Footer";
 import Login from "./Pages/Login";
 import Admin from "./Pages/Admin";
 import AddProperty from "./Pages/AddProperty";
@@ -16,6 +15,7 @@ import AdminCars from "./Pages/AdminCars";
 import AddCar from "./Pages/AddCar";
 import EditCar from "./Pages/EditCar";
 import Home from "./Pages/Home";
+import BottomBar from "./Components/BottomBar";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
             <>
               <Navbar />
               <Home />
-              <Footer />
+              <BottomBar />
             </>
           }
         />
@@ -37,7 +37,7 @@ function App() {
             <>
               <Navbar />
               <Houses />
-              <Footer />
+              <BottomBar />
             </>
           }
         />
@@ -47,7 +47,7 @@ function App() {
             <>
               <Navbar />
               <Cars />
-              <Footer />
+              <BottomBar />
             </>
           }
         />
@@ -57,7 +57,7 @@ function App() {
             <>
               <Navbar />
               <Lands />
-              <Footer />
+              <BottomBar />
             </>
           }
         />
@@ -67,7 +67,7 @@ function App() {
             <>
               <Navbar />
               <RentalHouses />
-              <Footer />
+              <BottomBar />
             </>
           }
         />
