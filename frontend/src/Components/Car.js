@@ -11,6 +11,7 @@ function Car() {
   const [data, setData] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const token = localStorage.getItem("token");
 
   //get all cars
@@ -24,9 +25,13 @@ function Car() {
           setLoading(false);
         } else {
           alert("Error");
+          setError("Error while fetching data...server is down.");
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setError("Error while fetching data...server is down.");
+      });
   }, []);
 
   // check if user is logged in, to display edit & delete buttons
@@ -56,6 +61,10 @@ function Car() {
       })
       .catch((err) => console.log(err));
   };
+
+  if (error) {
+    return <h4>{error}</h4>;
+  }
 
   return (
     <div className="properties">
