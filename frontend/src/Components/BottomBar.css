@@ -36,6 +36,13 @@
     color: white;
 }
 
+.icon {
+    margin: 10px 15px;
+    transform: scale(1.5);
+    /* color: whitesmoke; */
+    padding: 0;
+}
+
 .footer-bottom {
     text-align: center;
     border-top: 1px solid #777;

@@ -1,5 +1,8 @@
 import React from "react";
 import "./BottomBar.css";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 function BottomBar() {
   return (
@@ -11,14 +14,21 @@ function BottomBar() {
         </div>
         <div className="footer-section">
           <h3>Contact Us</h3>
-          <p>Email: info@realestate.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <p>Email: BirukSisay@gmail.com</p>
+          <p>Phone: +251963137715</p>
         </div>
         <div className="footer-section">
           <h3>Follow Us</h3>
           <p>
-            <a href="#">Facebook</a> | <a href="#">Twitter</a> |{" "}
-            <a href="#">Instagram</a>
+            <a href="https://www.facebook.com/">
+              <FacebookIcon className="icon" />
+            </a>
+            <a href="https://mail.google.com">
+              <EmailIcon className="icon" />
+            </a>
+            <a href="https://telegram.org/">
+              <TelegramIcon className="icon" />
+            </a>
           </p>
         </div>
       </div>
