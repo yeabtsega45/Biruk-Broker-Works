@@ -14,10 +14,13 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top z-index-99">
-      <div className="container-fluid">
+    <nav
+      className="navbar navbar-expand-sm navbar-dark fixed-top z-index-99"
+      style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+    >
+      <div className="container-fluid px-5">
         <a className="navbar-brand d-flex align-items-center" href="/">
-          <EmojiTransportationIcon style={{ fontSize: "40px" }} />{" "}
+          <EmojiTransportationIcon style={{ fontSize: "60px" }} />{" "}
           <strong>Biruk Broker Works</strong>
         </a>
         <button className="navbar-toggler" type="button" onClick={toggleNav}>
@@ -29,27 +32,48 @@ function Navbar() {
         >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="/">
+              <a
+                className="nav-link"
+                aria-current="page"
+                href="/"
+                style={{ fontSize: "18px", color: "whitesmoke" }}
+              >
                 <strong>Home</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/houses">
+              <a
+                className="nav-link"
+                href="/houses"
+                style={{ fontSize: "18px", color: "whitesmoke" }}
+              >
                 <strong>Houses</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/cars">
+              <a
+                className="nav-link"
+                href="/cars"
+                style={{ fontSize: "18px", color: "whitesmoke" }}
+              >
                 <strong>Cars</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/lands">
+              <a
+                className="nav-link"
+                href="/lands"
+                style={{ fontSize: "18px", color: "whitesmoke" }}
+              >
                 <strong>Lands</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/rentalhouses">
+              <a
+                className="nav-link"
+                href="/rentalhouses"
+                style={{ fontSize: "18px", color: "whitesmoke" }}
+              >
                 <strong>Rental_Houses</strong>
               </a>
             </li>
