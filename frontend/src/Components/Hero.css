@@ -1,0 +1,28 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay behind text */
+    padding: 20px;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0 0;
+}
+  
