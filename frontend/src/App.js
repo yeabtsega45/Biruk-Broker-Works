@@ -31,6 +31,16 @@ function App() {
           }
         />
         <Route
+          path="/houses"
+          element={
+            <>
+              <Navbar />
+              <Houses />
+              <Footer />
+            </>
+          }
+        />
+        <Route
           path="/cars"
           element={
             <>

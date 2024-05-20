@@ -30,6 +30,11 @@ function Navbar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="/">
+                <strong>Home</strong>
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/houses">
                 <strong>Houses</strong>
               </a>
             </li>

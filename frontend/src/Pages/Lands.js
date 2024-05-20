@@ -5,6 +5,7 @@ function Lands() {
   return (
     <>
       <HeroImage title="Lands" />
+      <h3>No properties found.</h3>
     </>
   );
 }

@@ -5,6 +5,7 @@ function RentalHouses() {
   return (
     <>
       <HeroImage title="Rental houses" />
+      <h3>No properties found.</h3>
     </>
   );
 }
