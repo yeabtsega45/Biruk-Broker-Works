@@ -8,6 +8,7 @@
     display: flex;
     height: 25vh;
     align-items: center;
+    font-size: 20px;
 }
 
 .properties {

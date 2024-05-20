@@ -8,5 +8,10 @@
 }
 
 .no-property {
-    text-align: center;
+    background-color: #efefef;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
