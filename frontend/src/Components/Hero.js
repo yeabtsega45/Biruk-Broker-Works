@@ -1,11 +1,12 @@
 import React from "react";
 import "./Hero.css";
+import heroImage from "../Assets/HeroImage.jpg";
 
-function Hero({ image, title, subtitle }) {
+function Hero({ title, subtitle }) {
   return (
     <div
       className="hero-container"
-      style={{ backgroundImage: `url(${image})` }}
+      style={{ backgroundImage: `url(${heroImage})` }}
     >
       <div className="hero-content">
         <h1 className="hero-title">{title}</h1>
