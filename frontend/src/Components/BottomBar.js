@@ -34,7 +34,8 @@ function BottomBar() {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Real Estate. All Rights Reserved.
+          &copy; {new Date().getFullYear()} Biruk Broker Works. All Rights
+          Reserved.
         </p>
       </div>
     </footer>

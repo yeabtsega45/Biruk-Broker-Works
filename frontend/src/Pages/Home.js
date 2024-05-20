@@ -4,8 +4,8 @@ import Hero from "../Components/Hero";
 function Home() {
   return (
     <Hero
-      title="Welcome to Our Real Estate"
-      subtitle="Find your dream home today"
+      title="Welcome to Our Web Site"
+      subtitle="Find your dream property today"
     />
   );
 }
