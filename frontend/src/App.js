@@ -15,6 +15,7 @@ import AdminHouses from "./Pages/AdminHouses";
 import AdminCars from "./Pages/AdminCars";
 import AddCar from "./Pages/AddCar";
 import EditCar from "./Pages/EditCar";
+import Home from "./Pages/Home";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           element={
             <>
               <Navbar />
-              <Houses />
+              <Home />
               <Footer />
             </>
           }
