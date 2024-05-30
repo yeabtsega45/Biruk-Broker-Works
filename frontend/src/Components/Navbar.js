@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-sm navbar-dark fixed-top z-index-99"
-      style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+      // style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
     >
       <div className="container-fluid px-5">
         <a className="navbar-brand d-flex align-items-center" href="/">

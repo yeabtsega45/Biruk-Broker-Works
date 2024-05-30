@@ -7,13 +7,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .hero-content {
+    position: relative;
     color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay behind text */
     padding: 20px;
+    z-index: 2;
 }
 
 .hero-title {
