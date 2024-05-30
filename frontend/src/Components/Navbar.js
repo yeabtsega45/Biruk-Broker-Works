@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
+import "./Navbar.css"; // Import the CSS file
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,29 +11,22 @@ function Navbar() {
       setIsScrolled(window.scrollY > 50);
     };
 
-    const nav = document.querySelector("#navbarNav");
-
     window.addEventListener("scroll", handleScroll);
-    nav.classList.toggle("show", isOpen);
 
     // Cleanup function
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isOpen]);
+  }, []);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <nav
-      className={`navbar navbar-expand-sm fixed-top z-index-99 ${
-        isScrolled ? "navbar-scrolled" : "navbar-dark"
-      }`}
-    >
-      <div className="container-fluid px-5">
-        <a className="navbar-brand d-flex align-items-center" href="/">
+    <nav className={`navbar ${isScrolled ? "navbar-scrolled" : ""}`}>
+      <div className="navbar-container">
+        <a className="navbar-brand" href="/">
           <EmojiTransportationIcon style={{ fontSize: "60px" }} />{" "}
           <strong>Biruk Broker Works</strong>
         </a>
@@ -40,54 +34,33 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
+          className={`navbar-collapse ${isOpen ? "show" : ""}`}
           id="navbarNav"
         >
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav">
             <li className="nav-item">
-              <a
-                className="nav-link"
-                aria-current="page"
-                href="/"
-                style={{ fontSize: "18px", color: "whitesmoke" }}
-              >
+              <a className="nav-link" href="/">
                 <strong>Home</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/houses"
-                style={{ fontSize: "18px", color: "whitesmoke" }}
-              >
+              <a className="nav-link" href="/houses">
                 <strong>Houses</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/cars"
-                style={{ fontSize: "18px", color: "whitesmoke" }}
-              >
+              <a className="nav-link" href="/cars">
                 <strong>Cars</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/lands"
-                style={{ fontSize: "18px", color: "whitesmoke" }}
-              >
+              <a className="nav-link" href="/lands">
                 <strong>Lands</strong>
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                href="/rentalhouses"
-                style={{ fontSize: "18px", color: "whitesmoke" }}
-              >
-                <strong>Rental_Houses</strong>
+              <a className="nav-link" href="/rentalhouses">
+                <strong>Rental Houses</strong>
               </a>
             </li>
           </ul>
