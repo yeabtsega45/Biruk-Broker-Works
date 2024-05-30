@@ -3,10 +3,22 @@ import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
     const nav = document.querySelector("#navbarNav");
+
+    window.addEventListener("scroll", handleScroll);
     nav.classList.toggle("show", isOpen);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isOpen]);
 
   const toggleNav = () => {
@@ -15,8 +27,9 @@ function Navbar() {
 
   return (
     <nav
-      className="navbar navbar-expand-sm navbar-dark fixed-top z-index-99"
-      // style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+      className={`navbar navbar-expand-sm fixed-top z-index-99 ${
+        isScrolled ? "navbar-scrolled" : "navbar-dark"
+      }`}
     >
       <div className="container-fluid px-5">
         <a className="navbar-brand d-flex align-items-center" href="/">

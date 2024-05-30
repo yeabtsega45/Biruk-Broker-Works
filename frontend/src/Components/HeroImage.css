@@ -1,16 +1,27 @@
 .hero {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 300px;
 }
 
-.hero > img {
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Overlay color */
+    z-index: 1; /* Ensure it sits above the image but below the text */
+}
+
+.hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.hero > h1 {
+.hero h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,11 +31,5 @@
     text-align: center;
     margin: 0;
     padding: 0 10px;
-    background: rgba(0, 0, 0, 0.5); /* Optional for better readability */
-}
-
-@media screen and (max-width: 768px) {
-    .hero {
-        height: 140px;
-    }
+    z-index: 2; /* Ensure it sits above the overlay */
 }
