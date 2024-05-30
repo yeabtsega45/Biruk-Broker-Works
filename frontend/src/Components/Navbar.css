@@ -1,0 +1,93 @@
+/* Navbar.css */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.navbar-scrolled {
+    background-color: #333;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    color: whitesmoke;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon::before {
+    content: '\2630'; /* Unicode for the hamburger icon */
+}
+
+.navbar-collapse {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.navbar-collapse.show {
+    display: flex;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.nav-item {
+    margin: 10px 0;
+}
+
+.nav-link {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .navbar-collapse {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
