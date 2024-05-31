@@ -7,13 +7,21 @@
     color: #fff;
 }
 
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
 .navbar-logo h2 {
     margin: 0;
+    font-size: 20px;
 }
 
 .navbar-links {
     display: flex;
     list-style: none;
+    padding-right: 10px;
 }
 
 .navbar-links a {
@@ -29,16 +37,8 @@
 
 .menu-toggle {
     display: none;
-    flex-direction: column;
     cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -46,6 +46,7 @@
         display: none;
         flex-direction: column;
         width: 100%;
+        position: relative;
     }
 
     .navbar-links.active {
@@ -54,5 +55,8 @@
 
     .menu-toggle {
         display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 }
