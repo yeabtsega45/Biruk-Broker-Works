@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./Components/Navbar";
+import Nav from "./Components/Nav";
 import { Routes, Route } from "react-router-dom";
 import Houses from "./Pages/Houses";
 import Cars from "./Pages/Cars";
@@ -25,7 +25,7 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar />
+              <Nav />
               <Home />
               <BottomBar />
             </>
@@ -35,7 +35,7 @@ function App() {
           path="/houses"
           element={
             <>
-              <Navbar />
+              <Nav />
               <Houses />
               <BottomBar />
             </>
@@ -45,7 +45,7 @@ function App() {
           path="/cars"
           element={
             <>
-              <Navbar />
+              <Nav />
               <Cars />
               <BottomBar />
             </>
@@ -55,7 +55,7 @@ function App() {
           path="/lands"
           element={
             <>
-              <Navbar />
+              <Nav />
               <Lands />
               <BottomBar />
             </>
@@ -65,7 +65,7 @@ function App() {
           path="/rentalhouses"
           element={
             <>
-              <Navbar />
+              <Nav />
               <RentalHouses />
               <BottomBar />
             </>

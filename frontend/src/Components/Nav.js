@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Nav.css";
+import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,8 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <h2>MyLogo</h2>
+        <EmojiTransportationIcon style={{ fontSize: "60px" }} />{" "}
+        <strong>Biruk Broker Works</strong>
       </div>
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
         <a href="#home">Home</a>
