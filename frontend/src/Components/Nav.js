@@ -16,10 +16,11 @@ const Nav = () => {
         <strong>Biruk Broker Works</strong>
       </div>
       <div className={`navbar-links ${isOpen ? "active" : ""}`}>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="/">Home</a>
+        <a href="/houses">Houses</a>
+        <a href="/cars">Cars</a>
+        <a href="/lands">Lands</a>
+        <a href="/rentalhouses">Rental Houses</a>
       </div>
       <div className="menu-toggle" onClick={toggleMenu}>
         <span className="bar"></span>
