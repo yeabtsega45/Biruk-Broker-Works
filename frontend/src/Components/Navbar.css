@@ -1,5 +1,3 @@
-/* Navbar.css */
-
 .navbar {
     position: fixed;
     top: 0;
@@ -80,7 +78,7 @@
     }
 
     .navbar-nav {
-        flex-direction: row;
+        flex-direction: row !important;
     }
 
     .nav-item {
