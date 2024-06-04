@@ -5,20 +5,20 @@ import content3 from "../Assets/g+1.jpg";
 const contentData = [
   {
     image: content1,
-    title: "Course Study",
-    description: "Study on specific bible topics.",
-    navigateTo: "/courses",
+    title: "Houses for sale",
+    description: "Discover a range of beautiful houses for sale.",
+    navigateTo: "/houses",
   },
   {
     image: content2,
-    title: "Sabbath School Study",
-    description: "Quarterly bible study on a topic.",
+    title: "Cars for sale",
+    description: "Explore a wide selection of cars for sale.",
     navigateTo: "/sabbathSchool",
   },
   {
     image: content3,
-    title: "Devotional Study",
-    description: "Daily devotional text study.",
+    title: "Houses for rent",
+    description: "Find your perfect house for rent.",
     navigateTo: "/devotion",
   },
 ];
