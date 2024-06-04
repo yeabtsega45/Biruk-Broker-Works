@@ -13,6 +13,9 @@
 
 .content-image img {
     width: 100%;
+    height: 30vh;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
 }
 
 .content-title {

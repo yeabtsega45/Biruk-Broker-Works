@@ -13,13 +13,13 @@ const contentData = [
     image: content2,
     title: "Cars for sale",
     description: "Explore a wide selection of cars for sale.",
-    navigateTo: "/sabbathSchool",
+    navigateTo: "/cars",
   },
   {
     image: content3,
     title: "Houses for rent",
     description: "Find your perfect house for rent.",
-    navigateTo: "/devotion",
+    navigateTo: "/rentalhouses",
   },
 ];
 
