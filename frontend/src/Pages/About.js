@@ -5,18 +5,18 @@ function About() {
   return (
     <div className="about-container">
       <div className="about-content">
-        <h1>About Our Real Estate App</h1>
+        <h1>About Our Website</h1>
         <p>
-          Welcome to [Your App Name], the ultimate solution for all your real
-          estate needs. Whether you're looking to buy, sell, or rent properties,
-          we provide a seamless and efficient experience tailored to your
-          requirements.
+          Welcome to Biruk Broker Works, the ultimate solution for all your
+          property needs. Whether you're looking to buy, sell, or rent
+          properties, we provide a seamless and efficient experience tailored to
+          your requirements.
         </p>
         <h2>Our Mission</h2>
         <p>
-          Our mission is to simplify the real estate process by connecting
-          buyers, sellers, and renters through a user-friendly platform. We aim
-          to provide the best listings, tools, and resources to help you make
+          Our mission is to simplify the property process by connecting buyers,
+          sellers, and renters through a user-friendly platform. We aim to
+          provide the best listings, tools, and resources to help you make
           informed decisions.
         </p>
         <h2>Features</h2>
@@ -29,7 +29,7 @@ function About() {
         </ul>
         <h2>Meet the Team</h2>
         <p>
-          Our team consists of experienced professionals in the real estate and
+          Our team consists of experienced professionals in the property and
           technology sectors. We are dedicated to providing top-notch service
           and continuously improving our platform to meet your needs.
         </p>

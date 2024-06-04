@@ -1,5 +1,8 @@
 import React from "react";
 import "./Contact.css";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import EmailIcon from "@material-ui/icons/Email";
+import TelegramIcon from "@material-ui/icons/Telegram";
 
 function Contact() {
   return (
@@ -15,21 +18,21 @@ function Contact() {
         <div className="contact-details">
           <h2>Phone</h2>
           <p>
-            <a href="tel:+1234567890">+1 (234) 567-890</a>
+            <a href="tel:+251963137715">+251963137715</a>
           </p>
 
           <h2>Email</h2>
           <p>
-            <a href="mailto:info@realestateapp.com">info@realestateapp.com</a>
+            <a href="mailto:BirukSisay@gmail.com">BirukSisay@gmail.com</a>
           </p>
 
           <h2>Address</h2>
           <p>
-            123 Real Estate Ave,
+            Kotebe, Mesalemiya,
             <br />
-            Suite 456,
+            Yeka,
             <br />
-            City, State, 78901
+            Addis Ababa
           </p>
 
           <h2>Follow Us</h2>
@@ -39,21 +42,21 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Facebook
+              <FacebookIcon className="icon" />
             </a>
             <a
-              href="https://twitter.com/yourprofile"
+              href="https://mail.google.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Twitter
+              <EmailIcon className="icon" />
             </a>
             <a
-              href="https://instagram.com/yourprofile"
+              href="https://telegram.org/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+              <TelegramIcon className="icon" />
             </a>
             <a
               href="https://linkedin.com/company/yourcompany"

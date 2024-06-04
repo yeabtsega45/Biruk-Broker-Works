@@ -17,6 +17,7 @@ import EditCar from "./Pages/EditCar";
 import Home from "./Pages/Home";
 import BottomBar from "./Components/BottomBar";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Nav />
               <Home />
               <About />
+              <Contact />
               <BottomBar />
             </>
           }
