@@ -18,6 +18,7 @@ import Home from "./Pages/Home";
 import BottomBar from "./Components/BottomBar";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Contents from "./Pages/Contents";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <>
               <Nav />
               <Home />
+              <Contents />
               <About />
               <Contact />
               <BottomBar />
