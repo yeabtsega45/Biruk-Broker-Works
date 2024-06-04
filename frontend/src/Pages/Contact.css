@@ -15,27 +15,27 @@
 }
 
 .contact-content h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #333;
     margin-bottom: 10px;
 }
 
 .contact-content p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #666;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .contact-details h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #555;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 .contact-details p {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #666;
     line-height: 1.6;
 }
@@ -56,7 +56,7 @@
 }
 
 .social-links a {
-    font-size: 1.2em;
+    font-size: 1em;
     color: #007bff;
     text-decoration: none;
 }
