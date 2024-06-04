@@ -1,6 +1,6 @@
-import content1 from "../../assets/content-1.svg";
-import content2 from "../../assets/content-2.svg";
-import content3 from "../../assets/content-3.svg";
+import content1 from "../Assets/estate2.jpg";
+import content2 from "../Assets/Ford.jpeg";
+import content3 from "../Assets/g+1.jpg";
 
 const contentData = [
   {

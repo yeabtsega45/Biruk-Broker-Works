@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import contentData from "./contentData";
-import ContentCard from "./ContentCard";
+import contentData from "../Utils/contentData";
+import ContentCard from "../Components/ContentCard";
 
 function Contents() {
   const navigate = useNavigate();
