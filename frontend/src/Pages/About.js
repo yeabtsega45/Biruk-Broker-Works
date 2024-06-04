@@ -22,10 +22,8 @@ function About() {
         <h2>Features</h2>
         <ul>
           <li>Extensive Property Listings</li>
-          <li>Advanced Search Filters</li>
           <li>User-Friendly Interface</li>
-          <li>Real-Time Notifications</li>
-          <li>Expert Advice and Resources</li>
+          <li>Broker Contacts</li>
         </ul>
         <h2>Meet the Team</h2>
         <p>

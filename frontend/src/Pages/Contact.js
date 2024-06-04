@@ -38,32 +38,25 @@ function Contact() {
           <h2>Follow Us</h2>
           <div className="social-links">
             <a
-              href="https://facebook.com/yourpage"
+              href="https://facebook.com/BirukSisay"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FacebookIcon className="icon" />
             </a>
             <a
-              href="https://mail.google.com"
+              href="https://mail.google.com/BirukSisay"
               target="_blank"
               rel="noopener noreferrer"
             >
               <EmailIcon className="icon" />
             </a>
             <a
-              href="https://telegram.org/"
+              href="https://telegram.org/BirukSisay"
               target="_blank"
               rel="noopener noreferrer"
             >
               <TelegramIcon className="icon" />
-            </a>
-            <a
-              href="https://linkedin.com/company/yourcompany"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
             </a>
           </div>
         </div>

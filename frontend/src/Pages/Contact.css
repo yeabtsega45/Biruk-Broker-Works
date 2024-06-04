@@ -51,7 +51,7 @@
 
 .social-links {
     display: flex;
-    gap: 10px;
+    gap: 4px;
     margin-top: 10px;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+    color: #043b77;
 }
 
 @media (max-width: 768px) {
