@@ -16,6 +16,7 @@ import AddCar from "./Pages/AddCar";
 import EditCar from "./Pages/EditCar";
 import Home from "./Pages/Home";
 import BottomBar from "./Components/BottomBar";
+import About from "./Pages/About";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <>
               <Nav />
               <Home />
+              <About />
               <BottomBar />
             </>
           }
