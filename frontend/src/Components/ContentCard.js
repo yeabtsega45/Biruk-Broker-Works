@@ -1,4 +1,5 @@
 import React from "react";
+import "./ContentCard.css";
 
 function ContentCard({ image, title, description, onClick }) {
   return (

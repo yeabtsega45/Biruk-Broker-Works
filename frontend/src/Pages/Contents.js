@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import contentData from "../Utils/contentData";
 import ContentCard from "../Components/ContentCard";
+import "./Contents.css";
 
 function Contents() {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ function Contents() {
   const handleClick = (path) => {
     navigate(path);
   };
+
   return (
     <div className="contents-container">
       <div className="contents-section">
