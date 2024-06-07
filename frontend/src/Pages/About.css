@@ -47,6 +47,7 @@
 .team-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .team-description {
@@ -56,5 +57,9 @@
 @media (max-width: 768px) {
     .about-content {
         padding: 15px;
+    }
+
+    .team-container {
+        flex-direction: column;
     }
 }

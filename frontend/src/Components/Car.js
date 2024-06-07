@@ -94,24 +94,28 @@ function Car() {
                   className="images"
                   alt=""
                 />
-                <img
-                  src={
-                    // `http://localhost:5000/images/` +
-                    `https://biruk-broker-works-api.onrender.com/images/` +
-                    car.image2
-                  }
-                  className="images"
-                  alt=""
-                />
-                <img
-                  src={
-                    // `http://localhost:5000/images/` +
-                    `https://biruk-broker-works-api.onrender.com/images/` +
-                    car.image3
-                  }
-                  className="images"
-                  alt=""
-                />
+                {car.image2 && (
+                  <img
+                    src={
+                      // `http://localhost:5000/images/` +
+                      `https://biruk-broker-works-api.onrender.com/images/` +
+                      car.image2
+                    }
+                    className="images"
+                    alt=""
+                  />
+                )}
+                {car.image3 && (
+                  <img
+                    src={
+                      // `http://localhost:5000/images/` +
+                      `https://biruk-broker-works-api.onrender.com/images/` +
+                      car.image3
+                    }
+                    className="images"
+                    alt=""
+                  />
+                )}
               </Carousel>
               <div className="property-content">
                 <p className="large">{car.name}</p>

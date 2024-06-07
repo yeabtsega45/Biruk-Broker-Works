@@ -95,24 +95,28 @@ function Property() {
                   className="images"
                   alt=""
                 />
-                <img
-                  src={
-                    // `http://localhost:5000/images/` +
-                    `https://biruk-broker-works-api.onrender.com/images/` +
-                    property.image2
-                  }
-                  className="images"
-                  alt=""
-                />
-                <img
-                  src={
-                    // `http://localhost:5000/images/` +
-                    `https://biruk-broker-works-api.onrender.com/images/` +
-                    property.image3
-                  }
-                  className="images"
-                  alt=""
-                />
+                {property.image2 && (
+                  <img
+                    src={
+                      // `http://localhost:5000/images/` +
+                      `https://biruk-broker-works-api.onrender.com/images/` +
+                      property.image2
+                    }
+                    className="images"
+                    alt=""
+                  />
+                )}
+                {property.image3 && (
+                  <img
+                    src={
+                      // `http://localhost:5000/images/` +
+                      `https://biruk-broker-works-api.onrender.com/images/` +
+                      property.image3
+                    }
+                    className="images"
+                    alt=""
+                  />
+                )}
               </Carousel>
               <div className="property-content">
                 <p className="large">{property.type}</p>
