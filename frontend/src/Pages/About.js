@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import TeamMemberCard from "../Components/TeamMemberCard";
 
 function About() {
   return (
@@ -31,6 +32,7 @@ function About() {
           technology sectors. We are dedicated to providing top-notch service
           and continuously improving our platform to meet your needs.
         </p>
+        <TeamMemberCard name="Biruk Sisay" role="Owner" />
       </div>
     </div>
   );
