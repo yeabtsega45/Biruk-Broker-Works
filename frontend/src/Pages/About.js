@@ -33,7 +33,7 @@ function About() {
             name="Biruk Sisay"
             role="Owner"
           />
-          <p>
+          <p className="team-description">
             Our team consists of experienced professionals in the property and
             technology sectors. We are dedicated to providing top-notch service
             and continuously improving our platform to meet your needs.
