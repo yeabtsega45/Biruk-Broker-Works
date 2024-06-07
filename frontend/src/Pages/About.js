@@ -27,12 +27,18 @@ function About() {
           <li>Broker Contacts</li>
         </ul>
         <h2>Meet the Team</h2>
-        <p>
-          Our team consists of experienced professionals in the property and
-          technology sectors. We are dedicated to providing top-notch service
-          and continuously improving our platform to meet your needs.
-        </p>
-        <TeamMemberCard name="Biruk Sisay" role="Owner" />
+        <div className="team-container">
+          <TeamMemberCard
+            photo="https://via.placeholder.com/100"
+            name="Biruk Sisay"
+            role="Owner"
+          />
+          <p>
+            Our team consists of experienced professionals in the property and
+            technology sectors. We are dedicated to providing top-notch service
+            and continuously improving our platform to meet your needs.
+          </p>
+        </div>
       </div>
     </div>
   );
